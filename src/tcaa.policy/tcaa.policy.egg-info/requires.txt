@@ -1,0 +1,6 @@
+setuptools
+Plone
+tcaa.theme
+
+[test]
+plone.app.testing

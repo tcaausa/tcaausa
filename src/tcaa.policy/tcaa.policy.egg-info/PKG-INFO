@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: tcaa.policy
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: http://dist.isotoma.com
+Author: Pat Smith
+Author-email: pat@isotoma.com
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        This product may contain traces of nuts.
+        
+        Changelog
+        =========
+        
+        1.0.0dev (unreleased)
+        ---------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
