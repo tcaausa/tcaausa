@@ -1,6 +1,10 @@
 README.txt
 setup.cfg
 setup.py
+docs/HISTORY.txt
+docs/INSTALL.txt
+docs/LICENSE.GPL
+docs/LICENSE.txt
 tcaa/__init__.py
 tcaa.theme.egg-info/PKG-INFO
 tcaa.theme.egg-info/SOURCES.txt
@@ -12,4 +16,13 @@ tcaa.theme.egg-info/paster_plugins.txt
 tcaa.theme.egg-info/requires.txt
 tcaa.theme.egg-info/top_level.txt
 tcaa/theme/__init__.py
+tcaa/theme/configure.zcml
 tcaa/theme/tests.py
+tcaa/theme/profiles/default/cssregistry.xml
+tcaa/theme/profiles/default/jsregistry.xml
+tcaa/theme/profiles/default/metadata.xml
+tcaa/theme/profiles/default/theme.xml
+tcaa/theme/static/index.html
+tcaa/theme/static/rules.xml
+tcaa/theme/static/css/style.css
+tcaa/theme/static/js/tcaa.js

@@ -1,0 +1,3 @@
+<object name="portal_types">
+    <object name="tcaa.content.Page"    meta_type="Dexterity FTI"/>
+</object>

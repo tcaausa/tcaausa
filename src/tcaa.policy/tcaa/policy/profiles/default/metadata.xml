@@ -3,5 +3,6 @@
   <version>1</version>
   <dependencies>
       <dependency>profile-tcaa.theme:default</dependency>
+      <dependency>profile-tcaa.content:default</dependency>
   </dependencies>
 </metadata>

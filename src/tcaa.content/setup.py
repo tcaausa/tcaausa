@@ -3,7 +3,7 @@ import os
 
 version = '1.0.0'
 
-setup(name='tcaa.theme',
+setup(name='tcaa.content',
       version=version,
       description="",
       long_description=open("README.txt").read() + "\n" +
@@ -24,11 +24,15 @@ setup(name='tcaa.theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-         'setuptools',
-         'plone.app.theming',
+          'setuptools',
+          'Products.CMFPlone',
+          'plone.app.dexterity [grok]',
+          'plone.app.referenceablebehavior',
+          'plone.app.relationfield',
+          'plone.namedfile [blobs]',
       ],
       extras_require={
-          'test': ['plone.app.testing',]
+          'test': ['plone.app.testing'],
       },
       entry_points="""
       # -*- Entry points: -*-

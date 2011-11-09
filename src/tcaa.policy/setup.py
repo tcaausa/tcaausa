@@ -27,6 +27,7 @@ setup(name='tcaa.policy',
           'setuptools',
           'Plone',    
           'tcaa.theme',
+          'tcaa.content',
       ],
       extras_require={
           'test': ['plone.app.testing',]
