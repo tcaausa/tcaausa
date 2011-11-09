@@ -8,17 +8,14 @@ from plone.namedfile.field import NamedBlobImage
 
 from plone.app.textfield import RichText
 
-class IPage(form.Schema, IImageScaleTraversable):
+from tcaa.content.basepage import IBasePage 
+
+class IPage(IBasePage):
     """Describes a page
 
     We mix in IImageScaleTraversable so that we can use the @@images view to
     look up scaled versions of the 'image' field
     """
-
-    content = RichText(
-            title=u"Page Content",
-            description=u"Rich text for page",
-        )
 
 
 class View(grok.View):
