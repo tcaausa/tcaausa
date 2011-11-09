@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="tcaa.content">
 
@@ -12,9 +13,11 @@
 
   <grok:grok package="." />
 
+  <plone:static directory="static" type="theme" />
+
   <genericsetup:registerProfile
       name="default"
-      title="TCAA content types"
+      title="TCAA Content Types"
       directory="profiles/default"
       description="Installs the tcaa.content package"
       provides="Products.GenericSetup.interfaces.EXTENSION"

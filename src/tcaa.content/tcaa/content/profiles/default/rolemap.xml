@@ -5,5 +5,10 @@
             <role name="Manager" />
             <role name="Site Administrator" />
         </permission>
+        <permission name="TCAA: Add Homepage" acquire="False">
+            <role name="Manager" />
+            <role name="Site Administrator" />
+        </permission>
     </permissions>
+
 </rolemap>

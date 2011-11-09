@@ -1,3 +1,15 @@
+# $Id$
+
+"""
+TCAA Page
+
+A standard page on the site
+"""
+
+__author__ = 'Pat Smith <pat.smith@isotoma.com>'
+__docformat__ = 'restructuredtext en'
+__version__ = '$Revision$'[11:-2]
+
 
 from five import grok
 from zope import schema

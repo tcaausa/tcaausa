@@ -7,7 +7,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="tcaa.policy"
+      title="TCAA Policy"
       directory="profiles/default"
       description="Installs the tcaa.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
