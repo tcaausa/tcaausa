@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+
+    <!-- Enable TCAA theme layer when installed -->
+    <layer name="tcaa.theme" interface="tcaa.theme.interfaces.ITCAATheme" />
+
+</layers>

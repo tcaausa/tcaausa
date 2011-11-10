@@ -28,7 +28,15 @@
         <after
             content="/html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
             theme-children="/html/head"
-        />
+            />
+
+        <!-- global navigation -->
+        <replace css:content="#portal-globalnav"
+                 css:theme="#menu" />
+
+        <!-- content -->
+        <replace css:content="#content"
+                 css:theme="#content" />
 
     </rules>
 </rules>
