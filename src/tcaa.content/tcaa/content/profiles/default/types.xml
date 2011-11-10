@@ -2,4 +2,5 @@
     <object name="tcaa.content.Page"        meta_type="Dexterity FTI"/>
     <object name="tcaa.content.Homepage"    meta_type="Dexterity FTI"/>
     <object name="tcaa.content.Section"     meta_type="Dexterity FTI"/>
+    <object name="tcaa.content.LinksPage"   meta_type="Dexterity FTI"/>
 </object>

@@ -6,5 +6,6 @@
     <permission id="tcaa.AddPage"       title="TCAA: Add Page" />
     <permission id="tcaa.AddHomepage"   title="TCAA: Add Homepage" />
     <permission id="tcaa.AddSection"    title="TCAA: Add Section" />
+    <permission id="tcaa.AddLinksPage"  title="TCAA: Add Section" />
 
 </configure>
