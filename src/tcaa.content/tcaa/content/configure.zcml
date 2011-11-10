@@ -13,8 +13,6 @@
 
   <grok:grok package="." />
 
-  <plone:static directory="static" type="theme" />
-
   <genericsetup:registerProfile
       name="default"
       title="TCAA Content Types"
