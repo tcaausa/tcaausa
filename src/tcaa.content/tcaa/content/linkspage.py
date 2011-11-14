@@ -49,6 +49,16 @@ class View(grok.View):
     grok.require('zope2.View')
     grok.name('view')
 
+class Fragment(grok.View):
+    """A view that returns the markup fragment for a links page that
+    can be called directly or by another view.
+
+    template: linkspage_templates/fragment.pt
+    """
+    grok.context(ILinksPage)
+    grok.require('zope2.View')
+    grok.name('fragment')
+
     def update(self):
         """Prepare information for the template
         """
@@ -73,4 +83,3 @@ class View(grok.View):
                     })
         return pages
 
-    
