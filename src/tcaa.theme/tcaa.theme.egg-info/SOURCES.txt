@@ -17,7 +17,10 @@ tcaa.theme.egg-info/requires.txt
 tcaa.theme.egg-info/top_level.txt
 tcaa/theme/__init__.py
 tcaa/theme/configure.zcml
+tcaa/theme/interfaces.py
+tcaa/theme/layout.py
 tcaa/theme/tests.py
+tcaa/theme/profiles/default/browserlayer.xml
 tcaa/theme/profiles/default/cssregistry.xml
 tcaa/theme/profiles/default/jsregistry.xml
 tcaa/theme/profiles/default/metadata.xml

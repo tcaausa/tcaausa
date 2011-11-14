@@ -30,8 +30,11 @@
             theme-children="/html/head"
             />
 
-        <!-- global navigation -->
-        <replace css:content="#portal-globalnav"
+        <!-- navigation -->
+        <drop css:content="dl.portletNavigationTree img" /> <!-- drop navigation tree images -->
+        <drop css:content="dl.portletNavigationTree dt.portletHeader" />
+
+        <replace css:content="#portal-column-one"
                  css:theme="#menu" />
 
         <!-- content -->

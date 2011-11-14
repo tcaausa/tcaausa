@@ -1,4 +1,6 @@
 /*
  * tcaa stylesheet
  */
-
+#wrapper    {width:1024px; background:#069843;}
+#navigation {width:300px; float:left; display:inline;}
+#content    {width:710px; float:right; display:inline; margin-left:10px;}
