@@ -9,12 +9,7 @@
 <body>
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
-        <tal:hasbackground tal:condition="context/backgroundImage">
-        <img tal:define="scale context/@@images"
-        tal:replace="structure python:scale.scale('backgroundImage', width=200, height=150, direction='down').tag()" />
-        </tal:hasbackground>
-
-        <div tal:content="structure context/content/output" />
+        <div tal:replace="structure context/@@fragment" />
     </metal:content-core>
 </metal:content-core>
 </body>

@@ -33,14 +33,21 @@ class IPage(IBasePage):
 class View(grok.View):
     """Default view (called "@@view" for a page.
 
-    The associated template is found in page_templates/view.pt.
+    The associated template is found in page_templates/view.pt
+    and it makes use of the @@fragment view
     """
     
     grok.context(IPage)
     grok.require('zope2.View')
     grok.name('view')
 
-    def update(self):
-        """Prepare information for the template
-        """
-        pass
+class Fragment(grok.View):
+    """A view that returns the markup fragment for a page. Can
+    be called directly or by used in another view.
+
+    The associated template is found in page_templates/fragment.pt
+    """
+    grok.context(IPage)
+    grok.require('zope2.View')
+    grok.name('fragment')
+

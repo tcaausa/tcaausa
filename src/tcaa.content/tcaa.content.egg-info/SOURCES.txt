@@ -25,6 +25,7 @@ tcaa/content/page.py
 tcaa/content/permissions.zcml
 tcaa/content/section.py
 tcaa/content/tests.py
+tcaa/content/homepage_templates/fragment.pt
 tcaa/content/homepage_templates/view.pt
 tcaa/content/linkspage_templates/view.pt
 tcaa/content/page_templates/view.pt
