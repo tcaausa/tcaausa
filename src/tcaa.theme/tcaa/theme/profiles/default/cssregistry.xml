@@ -1,17 +1,27 @@
 <?xml version="1.0"?>
 <object name="portal_css">
 
-    <stylesheet id="++theme++tcaa.theme/css/style.css"
-        expression="request/HTTP_X_THEME_ENABLED | nothing"
-        applyPrefix="True" />
-
     <!-- disabled plone styles for TCAA theme -->
-    <stylesheet 
-        id="public.css"
-        expression="not:request/HTTP_X_THEME_ENABLED | nothing"
-        />
+    <stylesheet id="public.css"         expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="base.css"           expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="columns.css"        expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="portlets.css"       expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="navtree.css"        expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="invisibles.css"     expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="forms.css"          expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="controlpanel.css"   expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="deprecated.css"     expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="ploneCustom.css"    expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="print.css"          expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <stylesheet id="member.css"         expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
 
+    <!-- theme stylesheets -->
+    <stylesheet id="++theme++tcaa.theme/css/plonage.css"    expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
+    <stylesheet id="++theme++tcaa.theme/css/fonts-min.css"  expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
+    <stylesheet id="++theme++tcaa.theme/css/reset-min.css"  expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
+    <stylesheet id="++theme++tcaa.theme/css/utility.css"    expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
+    <stylesheet id="++theme++tcaa.theme/css/style.css"      expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
 
-
+    
 
 </object>
