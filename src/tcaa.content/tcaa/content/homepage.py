@@ -39,37 +39,17 @@ class IHomepage(IBasePage):
 class View(grok.View):
     """Default view (@@view) for a homepage
 
-    The associated template is found in homepage_templates/view.pt.
+    The associated template is found in homepage_templates/view.pt
+    and it makes use of the @@fragment view
     """
 
     grok.context(IHomepage)
     grok.require('zope2.View')
     grok.name('view')
     
-#    def update(self):
-#        self.hasFeaturedPages = len(self.featuredPages()) > 0
-#
-#    @memoize
-#    def featuredPages(self):
-#        pages = []
-#        if self.context.featuredPages is not None:
-#            for ref in self.context.featuredPages:
-#                obj = ref.to_object
-#                scales = getMultiAdapter((obj, self.request), name='images')
-#                scale = scales.scale('navigationImage', width=64, height=64) #, direction='down')
-#                imageTag = None
-#                if scale is not None:
-#                    imageTag = scale.tag()
-#                pages.append({
-#                    'url': obj.absolute_url(),
-#                    'title': obj.title,
-#                    'description': obj.description,
-#                    'imageTag': imageTag,
-#                    })
-#        return pages
-
 class Fragment(grok.View):
-    """A view that returns the markup fragment for a homepage
+    """A view that returns the markup fragment for a homepage that can 
+    be called directly (from async javascript) or by another view.
 
     The associated template is found in homepage_templates/fragment.pt
     """
@@ -98,5 +78,4 @@ class Fragment(grok.View):
                     'imageTag': imageTag,
                     })
         return pages
-
 
