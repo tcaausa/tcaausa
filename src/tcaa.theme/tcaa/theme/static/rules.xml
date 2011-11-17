@@ -4,6 +4,17 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+    <!-- Modify all href attributes in the menu so that they are relative.
+         NOTE: xsl:template must be a root level tag to work -->
+    <xsl:template match="ul[@class = 'navTree navTreeLevel0']/li/a/@href[starts-with(.,'http://')]">
+        <xsl:attribute name="href">
+            <xsl:variable name="root" select="substring-after(.,'http://')"/>
+            <xsl:variable name="path" select="substring-after($root, '/')"/>
+            <xsl:value-of select="concat('/', $path)"/>
+        </xsl:attribute>
+    </xsl:template>
+
+
     <!-- Rules applying to standard Plone pages -->
     <rules css:if-content="#visual-portal-wrapper">
         <theme href="index.html" />
@@ -30,7 +41,6 @@
             theme-children="/html/head"
             />
 
-       
         <!-- navigation -->
         
         <drop css:content="dl.portletNavigationTree img" /> 
