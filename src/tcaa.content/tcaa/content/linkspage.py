@@ -12,16 +12,14 @@ __version__ = '$Revision$'[11:-2]
 
 
 from five import grok
-from zope import schema
-
-from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
-
+from zope import schema
+from z3c.relationfield.schema import RelationList, RelationChoice
 from tcaa.content.basepage import IBasePage 
 
 # View
-from zope.component import getMultiAdapter
 from plone.memoize.instance import memoize
+from zope.component import getMultiAdapter
 
 
 class ILinksPage(IBasePage):
@@ -38,16 +36,6 @@ class ILinksPage(IBasePage):
             )
         )
 
-
-class View(grok.View):
-    """Default view (called "@@view" for a page.
-
-    The associated template is found in linkspage_templates/view.pt.
-    """
-    
-    grok.context(ILinksPage)
-    grok.require('zope2.View')
-    grok.name('view')
 
 class Fragment(grok.View):
     """A view that returns the markup fragment for a links page that
@@ -71,12 +59,12 @@ class Fragment(grok.View):
             for ref in self.context.featuredPages:
                 obj = ref.to_object
                 scales = getMultiAdapter((obj, self.request), name='images')
-                scale = scales.scale('navigationImage', width=64, height=64) #, direction='down')
+                scale = scales.scale('navigationImage', width=64, height=64) 
                 imageTag = None
                 if scale is not None:
                     imageTag = scale.tag()
                 pages.append({
-                    'url': obj.absolute_url(),
+                    'url': '/' + '/'.join(obj.getPhysicalPath()[2:]),
                     'title': obj.title,
                     'description': obj.description,
                     'imageTag': imageTag,

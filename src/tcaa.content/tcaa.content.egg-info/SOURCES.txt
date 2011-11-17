@@ -17,6 +17,7 @@ tcaa.content.egg-info/requires.txt
 tcaa.content.egg-info/top_level.txt
 tcaa/content/__init__.py
 tcaa/content/basepage.py
+tcaa/content/browser.py
 tcaa/content/configure.zcml
 tcaa/content/homepage.py
 tcaa/content/interfaces.py
@@ -27,7 +28,9 @@ tcaa/content/section.py
 tcaa/content/tests.py
 tcaa/content/homepage_templates/fragment.pt
 tcaa/content/homepage_templates/view.pt
+tcaa/content/linkspage_templates/fragment.pt
 tcaa/content/linkspage_templates/view.pt
+tcaa/content/page_templates/fragment.pt
 tcaa/content/page_templates/view.pt
 tcaa/content/profiles/default/metadata.xml
 tcaa/content/profiles/default/registry.xml

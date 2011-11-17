@@ -8,16 +8,14 @@ __docformat__ = 'restructuredtext en'
 __version__ = '$Revision$'[11:-2]
 
 
-
 from zope import schema
 from plone.directives import form
-
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.namedfile.field import NamedBlobImage
-
 from plone.app.textfield import RichText
+from tcaa.content.interfaces import ITCAAContentish
 
-class IBasePage(form.Schema, IImageScaleTraversable):
+class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
     """Describes a page
 
     We mix in IImageScaleTraversable so that we can use the @@images view to

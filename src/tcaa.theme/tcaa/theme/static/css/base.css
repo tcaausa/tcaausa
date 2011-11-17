@@ -1,0 +1,35 @@
+
+body                    { color:#333; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0 40px; }
+
+h1, h2, h3, h4, h5, h6  { margin-top:0; }
+p                       { margin-top:0; }
+
+.fl                     { float:left; }
+.fr                     { float:right; }
+.clear                  { clear:both; }
+
+#page-wrap              { width:940px; }
+#page-menu              { width:120px; padding:20px 20px 80px; position:fixed; background:#333; color:#fff; }
+#page-menu a            { color:#fff; text-decoration:none; }
+#page-menu ul           { margin-left:0; padding-left:0; list-style-type:none; }
+#page-menu li           { margin:5px 0; } 
+#page-body              { width:780px; margin-left:160px; }
+
+.scroll                 { overflow:hidden; }
+.scroll-sect            { position:relative; margin-bottom:20px; }
+.scroll-sect:before,
+.scroll-sect:after      { display: table; content: ""; zoom: 1; }
+.scroll-sect:after      { clear: both; }
+
+.scroll-page            { width:780px; height:510px; float:left; background:#ddd; margin-right:0px; }
+.scroll-page-content    { padding:80px 80px; height:300px; overflow:hidden; }
+.scroll-page-footer     { padding:15px 80px; height:20px; background:#333; color:#fff; position:relative; }
+.scroll-page-footer ul  { margin:0; padding:0; margin-top:7px; }
+.scroll-page-footer li  { margin:0; padding:0; display:block; float:left; margin-left:5px; }
+.scroll-page-footer li a { background:#666; color:#fff; display:block; text-decoration:none; text-indent:-99999px; width:20px; height:5px; }
+.scroll-page-footer li a.active,
+.scroll-page-footer li a:hover  { background:#fff; }
+
+.scroll-page-footer::after       { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
+.scroll-page-footer::after       { width:0; height:0; border:25px solid; border-color:transparent transparent #333 transparent; }
+

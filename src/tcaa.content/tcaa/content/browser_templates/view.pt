@@ -6,6 +6,11 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="tcaa.content">
 
+<head>
+    <metal:headjs fill-slot="javascript_head_slot">
+        <script tal:replace="structure context/@@pagedata"></script>
+    </metal:headjs>
+</head>
 <body>
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">

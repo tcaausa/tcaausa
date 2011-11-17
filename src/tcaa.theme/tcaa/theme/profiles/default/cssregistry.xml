@@ -15,12 +15,13 @@
     <stylesheet id="print.css"          expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
     <stylesheet id="member.css"         expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
 
+
     <!-- theme stylesheets -->
     <stylesheet id="++theme++tcaa.theme/css/plonage.css"    expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
     <stylesheet id="++theme++tcaa.theme/css/fonts-min.css"  expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
     <stylesheet id="++theme++tcaa.theme/css/reset-min.css"  expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
     <stylesheet id="++theme++tcaa.theme/css/utility.css"    expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
-    <stylesheet id="++theme++tcaa.theme/css/style.css"      expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
+    <stylesheet id="++theme++tcaa.theme/css/base.css"       expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
 
     
 

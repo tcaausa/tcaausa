@@ -30,7 +30,5 @@ tcaa/theme/static/rules.xml
 tcaa/theme/static/css/fonts-min.css
 tcaa/theme/static/css/plonage.css
 tcaa/theme/static/css/reset-min.css
-tcaa/theme/static/css/style.css
 tcaa/theme/static/css/utility.css
 tcaa/theme/static/images/cloud_bg.png
-tcaa/theme/static/js/tcaa.js

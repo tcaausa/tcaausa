@@ -8,12 +8,8 @@ __docformat__ = 'restructuredtext en'
 __version__ = '$Revision$'[11:-2]
 
 from five import grok
-#from zope import schema
-#from plone.directives import form
-
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
-
 from tcaa.content.basepage import IBasePage 
 
 # View
@@ -36,17 +32,7 @@ class IHomepage(IBasePage):
             )
         )
 
-class View(grok.View):
-    """Default view (@@view) for a homepage
-
-    The associated template is found in homepage_templates/view.pt
-    and it makes use of the @@fragment view
-    """
-
-    grok.context(IHomepage)
-    grok.require('zope2.View')
-    grok.name('view')
-    
+   
 class Fragment(grok.View):
     """A view that returns the markup fragment for a homepage that can 
     be called directly (from async javascript) or by another view.

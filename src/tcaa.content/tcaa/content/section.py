@@ -14,7 +14,9 @@ from five import grok
 from zope import schema
 from plone.directives import form
 
-class ISection(form.Schema):
+from tcaa.content.interfaces import ITCAAContentish
+
+class ISection(form.Schema, ITCAAContentish):
     """A container for pages
     """
 
