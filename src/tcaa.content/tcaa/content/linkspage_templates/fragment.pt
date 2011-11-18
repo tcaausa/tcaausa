@@ -3,7 +3,8 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="tcaa.content">
-
+    
+    <div class="scroll-page-content">
         <tal:hasbackground tal:condition="context/backgroundImage">
         <img tal:define="scale context/@@images"
         tal:replace="structure python:scale.scale('backgroundImage', width=200, height=150, direction='down').tag()" />
@@ -22,4 +23,17 @@
         <div tal:condition="not: view/hasFeaturedPages">
             NO featured pages found
         </div>
+    </div>
+    <div class="scroll-page-footer">
+        <div class="fl">
+            <span class="scroll-page-title" tal:content="context/Title"/>
+        </div>
+        <div class="fr">
+            <ul tal:define="siblings context/@@section-siblings">
+                <li tal:repeat="sibling siblings"><a tal:attributes="href sibling/url; class python:sibling['current'] and 'active' or '';" tal:content="sibling/title"/></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+  
 </div>

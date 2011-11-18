@@ -1,12 +1,14 @@
 
 import json
 from five import grok
-from Acquisition import aq_inner
+from Acquisition import aq_inner, aq_parent
 from plone.memoize.instance import memoize
 from zope.component import getMultiAdapter
 from zope.interface import Interface
 from Products.CMFCore.utils import getToolByName
 from tcaa.content.interfaces import ITCAAContentish
+from tcaa.content.section import ISection
+from tcaa.content.basepage import IBasePage
 
 
 class View(grok.View):
@@ -75,4 +77,44 @@ class PageData(grok.View):
                     branch_nodes.append({"url": url, "title": node.Title})
             tree.append(branch_nodes)
         return tree
+
+class SectionSiblings(grok.View):
+
+    grok.context(IBasePage)
+    grok.require('zope2.View')
+    grok.name('section-siblings')
+
+    def update(self):
+        """Check that the context is within a Section and return siblings
+        Otherwise return an empty list
+        """
+        parent = aq_parent(self.context)
+        if ISection.providedBy(parent):
+            self.siblings = self.getSiblings()
+        else:
+            self.siblings = []
+
+    def render(self):
+        return self.siblings
+
+    def getSiblings(self):
+        pc = getToolByName(self.context, 'portal_catalog')
+        context = aq_inner(self.context)
+        parent = aq_parent(self.context)
+        path = parent.getPhysicalPath()
+        q = {'path': {'query': '/'.join(path), 'depth': 1},
+             'review_state': 'published',
+             'sort_on': 'getObjPositionInParent',
+             'object_provides':ITCAAContentish.__identifier__,
+             }
+        results = pc(q)
+        siblings = []
+        for sibling in results:
+            url = "/%s/%s" % (parent.id, sibling.id)
+            data = {"url": url, "title": sibling.Title, 'current': sibling.id == context.id }
+            siblings.append(data)
+        return siblings
+
+
+
 

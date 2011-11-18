@@ -17,8 +17,8 @@
             <span class="scroll-page-title" tal:content="context/Title"/>
         </div>
         <div class="fr">
-            <ul>
-                <li><a href="#">TODO</a></li>
+            <ul tal:define="siblings context/@@section-siblings">
+                <li tal:repeat="sibling siblings"><a tal:attributes="href sibling/url; class python:sibling['current'] and 'active' or '';" tal:content="sibling/title"/></li>
             </ul>
         </div>
         <div class="clear"></div>

@@ -57,8 +57,9 @@ class Fragment(grok.View):
                 imageTag = None
                 if scale is not None:
                     imageTag = scale.tag()
+     
                 pages.append({
-                    'url': obj.absolute_url(),
+                    'url': '/' + '/'.join(obj.getPhysicalPath()[2:]),
                     'title': obj.title,
                     'description': obj.description,
                     'imageTag': imageTag,
