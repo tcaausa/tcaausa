@@ -11,6 +11,8 @@
 
   <include file="permissions.zcml" />
 
+  <include package = ".portlets" />
+
   <grok:grok package="." />
 
   <genericsetup:registerProfile

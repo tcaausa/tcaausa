@@ -1,0 +1,35 @@
+<dl class="portlet portletTCAANavigation"
+    i19n:domain="tcaa.content">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        TCAA Navigation
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <ul id="tcaa-navigation">
+            <tal:sections tal:repeat="section view/tree">
+        <li><a tal:attributes="href section/url"
+               tal:content="section/title">link</a>
+            <tal:pages tal:condition="section/pages">
+            <ul>
+                <tal:page tal:repeat="page section/pages">
+                    <li>
+                        <a tal:attributes="href page/url"
+                           tal:content="page/title">link</a>
+                    </li>
+                </tal:page>
+            </ul>
+            </tal:pages>
+            </li>
+        </tal:sections>
+        </ul>
+    </dd>
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+
