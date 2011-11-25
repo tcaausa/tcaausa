@@ -11,7 +11,10 @@
     <div class="featured-pages">    
         <div tal:condition="view/hasFeaturedPages">
             <div class="fl" tal:repeat="page view/featuredPages">
-                <a tal:attributes="href page/url; title page/description"><img tal:replace="structure page/imageTag" /><div tal:content="page/title" /></a>
+                <a tal:attributes="href page/url; title page/description">
+                    <img tal:replace="structure page/imageTag" />
+                    <div class="featured-title" tal:content="page/title" />
+                </a>
             </div>
         </div>
     </div>
