@@ -23,24 +23,31 @@ var Controller = new (function(){
         this.pageData = pageData;
 
         this.container = $('.scroll');
+        this.sidebar = $('#page-sidebar')
         
         var currentContent = this.container.find('.scroll-page').children().remove();
         var currentUrl = this.getHashBangUrl(location.hash);
         
+        var pageTemplate = this.container.find('.scroll-page').remove();
+        var sectTemplate = this.container.find('.scroll-sect').remove();
+
         this.container.html('');
 
         for (var i=0; i<this.pageData.length; i++) {
-            var sect = $('<div class="scroll-sect"></div>');
-            sect.data('sect-index', i);
+            var sect = sectTemplate.clone();
             this.container.append(sect);
+
+            sect = sect.find('.scroll-sect-content');
+            sect.data('sect-index', i);
 
             for (var j=0; j<this.pageData[i].length; j++) {
                 var obj = this.pageData[i][j];
                 var url = obj.url;
-                var page = $('<div class="scroll-page"></div>');
+                var page = pageTemplate.clone();
 
                 page.data('sect-index', i);
                 page.data('page-index', j);
+                page.data('page-title', obj.title);
                 page.data('loaded', false);
 
                 if (currentContent && !i && !j) {
@@ -57,33 +64,56 @@ var Controller = new (function(){
             var sectPages = this.pageData[i].length;
             var sectWidth = sectPages * (page.outerWidth() + parseInt(page.css('marginRight'), 10));
             sect.css('width', sectWidth);
+            
+            this.initSectFooter(sect, this.pageData[i]);
         }
 
-        // this.initMenu();
+        this.initMenu();
         this.initLinks();
         this.initialised = true;
     }
 
     this.initMenu = function() {
-        this.menu = $('#page-menu');
+        // Set the highlighted and toggled open state of the top-level
+        // menu items when clicked on.
+        // 
+        // This is actually already handled by updateSectStatus, but 
+        // that's triggered when the animated scrolling arrives at a 
+        // page, rather than when the link is clicked.
+        //
+        // With this added tweak, the sidebar menu is updated when we
+        // click on it, and then the section footer is updated when 
+        // the animation finishes. Just feels a bit nicer that way.
 
-        var topList = $('<ul></ul>');
+        var items = this.sidebar.find('#page-menu ul.top > li');
+        items.children('a').click(function(){
+            items.removeClass('active');
+            $(this).closest('li').addClass('active');
+        });
+    }
 
-        for (var i=0; i<this.pageData.length; i++) {
-            var subList = $('<ul></ul>');
-            for (var j=0; j<this.pageData[i].length; j++) {
-                var obj = this.pageData[i][j];
-                var url = obj.url;
-                var item = $('<li><a href="' + url + '">' + url + '</a></li>');
-                if (j == 0) {
-                    topList.append(item.append(subList));
-                } else {
-                    subList.append(item);
-                }
-            }
+    this.initSectFooter = function(sect, menuData) {
+        var footer = this.getSectFooter(sect);
+        
+        var menu = footer.find('.scroll-sect-menu');
+        var itemTemplate = menu.find('li').remove().eq(0);
+
+        itemTemplate.find('a').removeClass('active');
+
+        for (var i=0; i<menuData.length; i++) {
+            var data = menuData[i];
+
+            var item = itemTemplate.clone();
+            var link = item.find('a');
+            var span = item.find('span');
+            
+            if (i == 0) link.addClass('active');
+
+            link.attr('href', data.url);
+            span.text(data.title);
+
+            menu.append(item);
         }
-
-        this.menu.append(topList);
     }
 
     this.initLinks = function(context) {
@@ -168,14 +198,18 @@ var Controller = new (function(){
 
     this.getSect = function(sect) {
         if (typeof sect == 'number') {
-            return this.container.find('.scroll-sect').eq(sect);
+            return this.container.find('.scroll-sect-content').eq(sect);
         } else {
             return sect;
         }
     }
 
+    this.getSectFooter = function(sect) {
+        return sect.closest('.scroll-sect').find('.scroll-sect-footer');
+    }
+
     this.getSectByPage = function(page) {
-        return page.closest('.scroll-sect');
+        return page.closest('.scroll-sect-content');
     }
 
     this.getPage = function(sect, page) {
@@ -190,7 +224,7 @@ var Controller = new (function(){
     }
 
     this.getSectIndex = function() {
-        var sects = this.container.find('.scroll-sect');
+        var sects = this.container.find('.scroll-sect-content');
         var y1 = $(window).scrollTop() - this.options.pageOffset.top;
         for (var i=0; i<sects.length; i++) {
             var y2 = sects.eq(i).position().top;
@@ -253,24 +287,52 @@ var Controller = new (function(){
         var body = $('html, body');
         var bodyCss, sectCss = null;
 
-        if (this.getSectIndex() != sect.data('sect-index')) {
+        var sectIndexA = this.getSectIndex();
+        var pageIndexA = this.getPageIndex(sect);
+
+        var sectIndexB = sect.data('sect-index');
+        var pageIndexB = page.data('page-index');
+
+        if (sectIndexA != sectIndexB) {
             bodyCss = { 'scrollTop': sect.position().top + this.options.pageOffset.top };
         }
-        if (this.getPageIndex(sect) != page.data('page-index')) {
+        if (pageIndexA != pageIndexB) {
             sectCss = { 'left': -page.position().left };
         }
+
+        // It this is the initial page load, set everything up immediately
+        // otherwise animate it all into place in one or more queued stages. 
+        
+        var doneFn = function(){ self.updateSectStatus(sectIndexB, pageIndexB); }
+        var pageFn = (sectCss) ? function(){ sect.animate(sectCss, { 'complete':doneFn }); } : doneFn;
+        var sectFn = (bodyCss) ? function(){ body.animate(bodyCss, { 'complete':pageFn }); } : pageFn;
 
         if (initial) {
             if (bodyCss) body.scrollTop(bodyCss.scrollTop); // scrollTop isn't actually a css property
             if (sectCss) sect.css(sectCss);
+            doneFn();
         } else {
-            var sectFn = (sectCss) ? function(){ sect.animate(sectCss); } : function(){};
-            if (bodyCss) {
-                body.animate(bodyCss, { 'complete':sectFn });
-            } else {
-                sectFn();
-            }
+            sectFn();
         }
+    }
+
+    this.updateSectStatus = function(sect, page) {
+        if (typeof sect == 'number') sect = this.getSect(sect);
+        if (typeof page == 'number') page = this.getPage(sect, page);
+        
+        if (typeof page == 'undefined') {
+            var page = this.getPage(sect, this.getPageIndex(sect));
+        }
+
+        var sectIndex = page.data('sect-index');
+        var pageIndex = page.data('page-index');
+        var pageTitle = page.data('page-title');
+
+        var footer = this.getSectFooter(sect);
+        footer.find('.scroll-sect-title').text(pageTitle);
+        footer.find('.scroll-sect-menu li a').removeClass('active').eq(pageIndex).addClass('active');
+
+        this.sidebar.find('#page-menu ul.top > li').removeClass('active').eq(sectIndex).addClass('active');
     }
 
     this.loadSect = function(sect) {

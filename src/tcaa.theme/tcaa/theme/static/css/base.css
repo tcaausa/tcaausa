@@ -1,35 +1,71 @@
 
-body                    { color:#333; font-family:Arial, Helvetica, sans-serif; font-size:14px; margin:0 40px; }
+body                                { background:#c6d4dd url(../img/bg.gif); color:#555; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; margin:0; padding:0; }
 
-h1, h2, h3, h4, h5, h6  { margin-top:0; }
-p                       { margin-top:0; }
 
-.fl                     { float:left; }
-.fr                     { float:right; }
-.clear                  { clear:both; }
+/* Layout */
 
-#page-wrap              { width:940px; }
-#page-menu              { width:120px; padding:20px 20px 80px; position:fixed; background:#333; color:#fff; }
-#page-menu a            { color:#fff; text-decoration:none; }
-#page-menu ul           { margin-left:0; padding-left:0; list-style-type:none; }
-#page-menu li           { margin:5px 0; } 
-#page-body              { width:780px; margin-left:160px; }
+#page-wrap                          { width:1024px; margin:0 auto; }
+#page-sidebar                       { background:#00008f; width:121px; padding:14px; position:fixed; color:#fff; }
+#page-content                       { width:875px; margin-left:149px; }
 
-.scroll                 { overflow:hidden; }
-.scroll-sect            { position:relative; margin-bottom:20px; }
+#page-logo                          { margin-bottom:35px; }
+#page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
+
+#page-menu ul                       { margin-left:0; padding-left:0; list-style-type:none; }
+#page-menu li                       { margin:3px 0; font-size:15px; } 
+#page-menu li a                     { color:#fff; text-decoration:none; }
+#page-menu li a:hover               { color:#80d7ff; }
+#page-menu li.active a              { color:#00aeff; }
+
+#page-menu ul.sub                   { margin-top:3px; margin-left:15px; display:none; }
+#page-menu ul.sub li                { margin:0; font-size:11px; line-height:15px; }
+#page-menu li.active ul.sub         { display:block; }
+
+#page-twitter                       { border-top:1px solid #fff; margin-top:25px; padding-top:25px; height:150px; }
+#page-twitter h2                    { font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; }
+#page-twitter p                     { font-size:11px; line-height:16px; margin:0; }
+
+#page-channels                      { margin:8px 0; }
+#page-channels ul                   { margin:0; padding:0; }
+#page-channels li                   { float:left; margin-right:5px; }
+#page-channels li a                 { display:block; width:17px; height:13px; text-indent:-99999px; }
+#page-channels li.channel-email a      { background:url(../img/icons/email.gif) no-repeat; }
+#page-channels li.channel-facebook a   { background:url(../img/icons/facebook.gif) no-repeat; }
+#page-channels li.channel-twitter a    { background:url(../img/icons/twitter.gif) no-repeat; }
+
+
+/* General */
+
+h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; }
+h2                                  { font-size:24px; }
+p                                   { margin-top:0; }
+
+.fl                                 { float:left; }
+.fr                                 { float:right; }
+.clear                              { clear:both; }
+
+
+/* Feature-specific */
+
+.scroll                             { }
+.scroll-sect                        { width:875px; height:608px; margin-bottom:20px; overflow:hidden; }
 .scroll-sect:before,
-.scroll-sect:after      { display: table; content: ""; zoom: 1; }
-.scroll-sect:after      { clear: both; }
+.scroll-sect:after                  { display:table; content:""; zoom:1; }
+.scroll-sect:after                  { clear:both; }
 
-.scroll-page            { width:780px; height:510px; float:left; background:#ddd; margin-right:0px; }
-.scroll-page-content    { padding:80px 80px; height:300px; overflow:hidden; }
-.scroll-page-footer     { padding:15px 80px; height:20px; background:#333; color:#fff; position:relative; }
-.scroll-page-footer ul  { margin:0; padding:0; margin-top:7px; }
-.scroll-page-footer li  { margin:0; padding:0; display:block; float:left; margin-left:5px; }
-.scroll-page-footer li a { background:#666; color:#fff; display:block; text-decoration:none; text-indent:-99999px; width:20px; height:5px; }
-.scroll-page-footer li a.active,
-.scroll-page-footer li a:hover  { background:#fff; }
+.scroll-sect-content                { height:568px; overflow:hidden; position:relative; }
 
-.scroll-page-footer::after       { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
-.scroll-page-footer::after       { width:0; height:0; border:25px solid; border-color:transparent transparent #333 transparent; }
+.scroll-sect-footer                 { background:#00008f; padding:10px 80px; height:20px; color:#fff; position:relative; font-family:'Droid Serif', serif; }
+.scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
+.scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
+.scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; /* Padding provides a larger click target. */ }
+.scroll-sect-footer li a span       { background:#0138c5; display:block; width:20px; height:5px; }
+.scroll-sect-footer li a:hover span { background:#0071dd; }
+.scroll-sect-footer li a.active span { background:#00aeff; }
+
+.scroll-sect-footer::after          { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
+.scroll-sect-footer::after          { width:0; height:0; border:25px solid; border-color:transparent transparent #00008f transparent; }
+
+.scroll-page                        { background:#78cbf5; padding:100px 80px; width:715px; height:368px; float:left; margin-right:0px; overflow:hidden; }
+.scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 

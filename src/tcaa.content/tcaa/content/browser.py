@@ -92,7 +92,9 @@ class SectionSiblings(grok.View):
         if ISection.providedBy(parent):
             self.siblings = self.getSiblings()
         else:
-            self.siblings = []
+            context = aq_inner(self.context)
+            url = "/%s" % (context.id,)
+            self.siblings = [{"url":url, "title":context.Title(), "current":True}]
 
     def render(self):
         return self.siblings
@@ -111,7 +113,7 @@ class SectionSiblings(grok.View):
         siblings = []
         for sibling in results:
             url = "/%s/%s" % (parent.id, sibling.id)
-            data = {"url": url, "title": sibling.Title, 'current': sibling.id == context.id }
+            data = {"url": url, "title": sibling.Title, "current": sibling.id == context.id }
             siblings.append(data)
         return siblings
 

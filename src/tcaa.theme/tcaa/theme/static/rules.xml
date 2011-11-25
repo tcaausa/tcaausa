@@ -43,15 +43,10 @@
 
         <!-- navigation -->
         
-        <drop css:content="dl.portletNavigationTree img" /> 
-        <drop css:content="dl.portletNavigationTree dt.portletHeader" />
-
-        <replace css:content-children="#portal-column-one ul.navTree"
+        <replace css:content="#tcaa-navigation"
                  css:theme-children="#page-menu" />
 
-        <replace css:content="#content"
-                 css:theme-children=".scroll-page" />
- 
-
+        <replace css:content-children="#content-core"
+                 css:theme-children=".scroll-sect" />
     </rules>
 </rules>
