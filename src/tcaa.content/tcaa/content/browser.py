@@ -118,6 +118,10 @@ class SectionSiblings(grok.View):
         return siblings
 
 class CustomPageStyle(grok.View):
+    """Helper view for IBasePage implementors that
+    will generate the right styling for their containing div
+    when running through Diazo or direct to the admin interface.
+    """
     grok.context(IBasePage)
     grok.require('zope2.View')
     grok.name('custom-page-style')
@@ -129,11 +133,15 @@ class CustomPageStyle(grok.View):
         if scale is None:
             self.style = None
         else:
-            self.style = "background:url(%s) no-repeat 0 0; margin:-100px -80px; height:568px; padding:100px 80px;" % (scale.url,)
+            margin = ""
+            if self.request.get('HTTP_X_THEME_ENABLED'):
+                # only apply this margin when handling requests 
+                # via Diazo
+                margin = "margin:-100px -80px;"
+            self.style = "background:url(%s) no-repeat 0 0; %s height:568px; padding:100px 80px;" % (scale.url, margin)
 
     def render(self):
         return self.style
 
        
-
 
