@@ -30,6 +30,7 @@
     </property>
 
     <!-- Views and aliases -->
+    <property name="immediate_view">folder_summary_view</property>
     <property name="default_view">folder_summary_view</property>
     <property name="default_view_fallback">True</property>
     <property name="view_methods">

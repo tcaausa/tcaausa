@@ -59,7 +59,7 @@ class Fragment(grok.View):
             for ref in self.context.featuredPages:
                 obj = ref.to_object
                 scales = getMultiAdapter((obj, self.request), name='images')
-                scale = scales.scale('navigationImage', width=64, height=64) 
+                scale = scales.scale('navigationImage', width=282, height=224) 
                 imageTag = None
                 if scale is not None:
                     imageTag = scale.tag()

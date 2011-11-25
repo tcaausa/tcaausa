@@ -69,3 +69,7 @@ p                                   { margin-top:0; }
 .scroll-page                        { background:#78cbf5; padding:100px 80px; width:715px; height:368px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 
+
+/* Page-specific */
+.featured-pages                     { width:875px; padding:5px; }
+.featured-pages div.fl              { width:282px; height: 224px; margin-right:10px;}
