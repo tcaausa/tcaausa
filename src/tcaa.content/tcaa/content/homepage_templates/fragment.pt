@@ -2,12 +2,9 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="tcaa.content">
-
-    <tal:hasbackground tal:condition="context/backgroundImage">
-        <img tal:define="scale context/@@images"
-             tal:replace="structure python:scale.scale('backgroundImage', width=200, height=150, direction='down').tag()" />
-    </tal:hasbackground>
+      i18n:domain="tcaa.content"
+      tal:attributes="style context/@@custom-page-style"
+      >
 
     <div tal:content="structure context/content/output" />
 

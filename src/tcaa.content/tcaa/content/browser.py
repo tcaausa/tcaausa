@@ -117,6 +117,23 @@ class SectionSiblings(grok.View):
             siblings.append(data)
         return siblings
 
+class CustomPageStyle(grok.View):
+    grok.context(IBasePage)
+    grok.require('zope2.View')
+    grok.name('custom-page-style')
 
+    def update(self):
+        context = aq_inner(self.context)
+        scales = getMultiAdapter((context, self.request), name='images')
+        scale = scales.scale('backgroundImage', width=875, height=568)
+        if scale is None:
+            self.style = None
+        else:
+            self.style = "background:url(%s) no-repeat 0 0; margin:-100px -80px; height:568px; padding:100px 80px;" % (scale.url,)
+
+    def render(self):
+        return self.style
+
+       
 
 

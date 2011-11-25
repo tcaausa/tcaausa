@@ -13,6 +13,7 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 from tcaa.content.basepage import IBasePage 
 
 # View
+from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 from plone.memoize.instance import memoize
 
@@ -65,4 +66,6 @@ class Fragment(grok.View):
                     'imageTag': imageTag,
                     })
         return pages
+    
+
 
