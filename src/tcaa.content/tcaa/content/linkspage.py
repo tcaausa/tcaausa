@@ -12,9 +12,11 @@ __version__ = '$Revision$'[11:-2]
 
 
 from five import grok
+from plone.directives import form
 from plone.formwidget.contenttree import ObjPathSourceBinder
 from zope import schema
 from z3c.relationfield.schema import RelationList, RelationChoice
+
 from tcaa.content.basepage import IBasePage 
 
 # View
@@ -35,6 +37,11 @@ class ILinksPage(IBasePage):
                 ),
             )
         )
+
+    form.omitted('content')
+    form.omitted('content_layout')
+    form.omitted('borderColor')
+    form.omitted('backgroundColor')
 
 
 class Fragment(grok.View):

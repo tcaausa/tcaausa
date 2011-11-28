@@ -38,7 +38,7 @@ body                                { background:#c6d4dd url(../img/bg.gif); col
 
 h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; }
 h2                                  { font-size:24px; margin-bottom:20px; }
-p                                   { margin-top:0; }
+p                                   { margin-top:18px; }
 a                                   { text-decoration:None; }
 
 .fl                                 { float:left; }
@@ -71,8 +71,13 @@ a                                   { text-decoration:None; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 
 
-/* Page Layout */
-.featured-pages                     { width:875px; padding:5px; position:absolute; top:264px; margin:0px -80px -100px -80px; }
+/* Content Layout */
+
+.content-left                       { width:380px; }
+.content-right                      { width:380px; float:right; }
+.content-wide                       { }
+
+.featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-right:9px;}
 .featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }

@@ -9,11 +9,19 @@ __version__ = '$Revision$'[11:-2]
 
 
 from zope import schema
+from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from plone.directives import form
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.namedfile.field import NamedBlobImage
 from plone.app.textfield import RichText
 from tcaa.content.interfaces import ITCAAContentish
+
+content_layout_options = SimpleVocabulary(
+        [SimpleTerm(value=u"content-left",          title=u"Align Left"),
+         SimpleTerm(value=u"content-right",         title=u"Align Right"),
+         SimpleTerm(value=u"content-wide",          title=u"Fill width"),]
+    )
+
 
 class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
     """Describes a page
@@ -26,6 +34,13 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             title=u"Page Content",
             description=u"Rich text for page",
         )
+
+    content_layout = schema.Choice(
+            title=u"Page Content Layout",
+            description=u"Position at which the above text content should be displayed",
+            vocabulary=content_layout_options,
+        )
+
     borderColor = schema.TextLine(
             title=u"Border Color",
             description=u"A hex value for the border color of text on this page",

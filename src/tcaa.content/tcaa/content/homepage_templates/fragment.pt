@@ -6,7 +6,8 @@
       tal:attributes="style context/@@custom-page-style"
       >
 
-    <div tal:content="structure context/content/output"></div>
+    <div tal:attributes="class context/content_layout" 
+           tal:content="structure context/content/output"></div>
 
     <div class="featured-pages">    
         <div tal:condition="view/hasFeaturedPages">
