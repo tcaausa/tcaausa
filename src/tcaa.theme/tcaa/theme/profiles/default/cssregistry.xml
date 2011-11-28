@@ -23,6 +23,8 @@
     <stylesheet id="++theme++tcaa.theme/css/utility.css"    expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
     <stylesheet id="++theme++tcaa.theme/css/base.css"       expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
 
+    <!-- admin stylesheets -->
+    <stylesheet id="++theme++tcaa.theme/css/admin.css"       expression="not:request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />
     
 
 </object>

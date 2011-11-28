@@ -1,0 +1,71 @@
+
+.scroll-sect-content                { background:#c6d4dd url(../img/bg.gif); color:#555; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; margin:0; padding:0; }
+/* Layout */
+/*
+#page-wrap                          { width:1024px; margin:0 auto; }
+#page-sidebar                       { background:#00008f; width:121px; padding:14px; position:fixed; color:#fff; }
+#page-content                       { width:875px; margin-left:149px; }
+
+#page-logo                          { margin-bottom:35px; }
+#page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
+*/
+
+
+/* General */
+
+h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; }
+h2                                  { font-size:24px; margin-bottom:20px; }
+p                                   { margin-top:18px; }
+a                                   { text-decoration:None; }
+
+.fl                                 { float:left; }
+.fr                                 { float:right; }
+.clear                              { clear:both; }
+
+
+/* Feature-specific */
+
+.scroll                             { }
+.scroll-sect                        { width:875px; height:608px; margin-bottom:20px; overflow:hidden; }
+.scroll-sect:before,
+.scroll-sect:after                  { display:table; content:""; zoom:1; }
+.scroll-sect:after                  { clear:both; }
+
+.scroll-sect-content                { width:875px; height:568px; overflow:hidden; position:relative; }
+
+.scroll-sect-footer                 { width:715px; background:#00008f; padding:10px 80px; height:20px; color:#fff; position:relative; font-family:'Droid Serif', serif; }
+.scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
+.scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
+.scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; /* Padding provides a larger click target. */ }
+.scroll-sect-footer li a span       { background:#0138c5; display:block; width:20px; height:5px; }
+.scroll-sect-footer li a:hover span { background:#0071dd; }
+.scroll-sect-footer li a.active span { background:#00aeff; }
+
+.scroll-sect-footer::after          { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
+.scroll-sect-footer::after          { width:0; height:0; border:25px solid; border-color:transparent transparent #00008f transparent; }
+
+.scroll-page                        { background:#78cbf5; padding:100px 80px; width:715px; height:368px; float:left; margin-right:0px; overflow:hidden; }
+.scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
+
+
+/* Content Layout */
+
+.content-left                       { width:380px; padding:20px; }
+.content-right                      { width:380px; padding:20px; float:right; }
+.content-wide                       { width:100%;  padding:20px; }
+
+.featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
+.featured-pages div.fl              { width:282px; height:224px; margin-right:9px;}
+.featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
+.featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
+.featured-pages img                 {  }
+.featured-pages a                   { color:#000; font-family: 'Droid Serif',serif; }
+
+/* Page Layout exceptions */
+div.homepage                        { padding-top:35px !important; }
+div.linkspage .featured-pages       { top: 40px; }
+
+/* Admin specific */
+.portletTCAANavigation              { display:none; }
+#content ul                         { list-style-type:none; }
+#content .scroll-sect-footer a:link { border-bottom: none; }
