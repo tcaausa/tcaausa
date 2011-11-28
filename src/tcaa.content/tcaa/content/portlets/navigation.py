@@ -96,6 +96,11 @@ class Renderer(base.Renderer):
                     url = "/%s/%s" % (branch.id, page.id)
                     if first_page_url == None:
                         first_page_url = url
+                    if page.Title == branch.Title:
+                        # A TRICK! A FEATURE!
+                        # If the page shares the same Title as the section it is in then omit it
+                        # from the menu - the section link will serve. 
+                        continue
                     pages.append({"url": url, "title": page.Title})
                 branch_nodes.append({"url":first_page_url, "title":branch.Title, "pages":pages})
             tree.extend(branch_nodes)
