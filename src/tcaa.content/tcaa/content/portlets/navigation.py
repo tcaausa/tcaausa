@@ -21,6 +21,7 @@ from plone.app.portlets.portlets import base
 from plone.memoize.instance import memoize
 from plone.portlets.interfaces import IPortletDataProvider
 
+from Products.ATContentTypes.interfaces.link import IATLink
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 
@@ -76,14 +77,18 @@ class Renderer(base.Renderer):
         q = {'path': {'query': '/'.join(path), 'depth':1},
              'review_state' : 'published',
              'sort_on': 'getObjPositionInParent',
-             'object_provides':ITCAAContentish.__identifier__,
+             'object_provides':(ITCAAContentish.__identifier__, IATLink.__identifier__,),
              }
         tree = []
         results = pc(q)
         for branch in results:
             branch_nodes = []
             pages = []
-            if branch.portal_type != 'tcaa.content.Section':
+
+            if branch.portal_type == 'Link':
+                url = branch.getRemoteUrl
+                branch_nodes.append({"url": url, "title": branch.Title, "pages": pages})
+            elif branch.portal_type != 'tcaa.content.Section':
                 url = "/%s" % (branch.id)
                 branch_nodes.append({"url": url, "title": branch.Title, "pages": pages})
             else:
