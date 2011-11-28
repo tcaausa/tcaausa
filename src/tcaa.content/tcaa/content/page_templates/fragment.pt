@@ -3,9 +3,11 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="tcaa.content"
-      tal:attributes="style context/@@custom-page-style"
+      tal:define="custom_style context/@@custom-page-style"
+      tal:attributes="style custom_style/page_style"
       >
 
-      <div tal:attributes="class context/content_layout"
+      <div tal:attributes="class context/content_layout;
+                           style custom_style/content_style;"
            tal:content="structure context/content/output" />
 </div>

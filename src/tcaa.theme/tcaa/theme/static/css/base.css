@@ -73,9 +73,9 @@ a                                   { text-decoration:None; }
 
 /* Content Layout */
 
-.content-left                       { width:380px; }
-.content-right                      { width:380px; float:right; }
-.content-wide                       { }
+.content-left                       { width:380px; padding:20px; }
+.content-right                      { width:380px; padding:20px; float:right; }
+.content-wide                       { width:100%;  padding:20px; }
 
 .featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-right:9px;}

@@ -141,7 +141,22 @@ class CustomPageStyle(grok.View):
             self.style = "background:url(%s) no-repeat 0 0; %s height:568px; padding:100px 80px;" % (scale.url, margin)
 
     def render(self):
+        #return self.style
+        return self
+
+    def page_style(self):
         return self.style
+
+    def content_style(self):
+        context = aq_inner(self.context)
+        bg_color = context.backgroundColor
+        bo_color = context.borderColor
+        element_style = ''
+        if bg_color:
+            element_style += "background-color:#%s; " % (bg_color,)
+        if bo_color:
+            element_style += "border: 1px solid #%s; " %(bo_color,)
+        return element_style
 
        
 
