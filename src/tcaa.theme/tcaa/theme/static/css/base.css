@@ -38,7 +38,7 @@ body                                { background:#c6d4dd url(../img/bg.gif); col
 
 h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; }
 h2                                  { font-size:24px; margin-bottom:20px; }
-p                                   { margin-top:18px; }
+p                                   { margin:18px 0 10px 0; }
 a                                   { text-decoration:None; }
 
 .fl                                 { float:left; }
@@ -83,6 +83,14 @@ a                                   { text-decoration:None; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
 .featured-pages a                   { color:#000; font-family: 'Droid Serif',serif; }
+
+.contactpage div.fl                 { width:200px; color:#ffffff; font-size}
+.contactpage div.fl.social          { width:115px; }
+.contactpage .location              { margin-bottom: 50px; }
+.contactpage div.fl p               { margin: 0 0 0 0; }
+.contactpage table.invisible td,
+.contactpage table.invisible th     { padding:0 10px 0 0; }
+
 
 /* Page Layout exceptions */
 div.homepage                        { padding-top:35px !important; }

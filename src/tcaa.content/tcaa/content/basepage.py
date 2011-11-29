@@ -52,12 +52,12 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             required=False,
         )
     backgroundImage = NamedBlobImage(
-            title=u"Background Image",
+            title=u"Background Image (875 x 568)",
             description=u"An image used for the background of this page",
             required=False,
         )
     navigationImage = NamedBlobImage(
-            title=u"Navigation Image",
+            title=u"Navigation Image (282 x 224)",
             description=u"An image used on other pages when linking to this page",
             required=False,
         )
