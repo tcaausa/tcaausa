@@ -15,6 +15,7 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.namedfile.field import NamedBlobImage
 from plone.app.textfield import RichText
 from tcaa.content.interfaces import ITCAAContentish
+from plone.z3cform.textlines.textlines import TextLinesFieldWidget
 
 content_layout_options = SimpleVocabulary(
         [SimpleTerm(value=u"content-left",          title=u"Align Left"),

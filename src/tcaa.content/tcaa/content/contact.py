@@ -17,6 +17,12 @@ from zope import schema
 
 from tcaa.content.basepage import IBasePage
 
+#View
+from zope.component import queryUtility
+from plone.registry.interfaces import IRegistry
+from plone.memoize.instance import memoize
+from tcaa.content.interfaces import ITCAASettings
+
 class IContactPage(IBasePage):
     """Describes a contact page
     """
@@ -62,7 +68,15 @@ class Fragment(grok.View):
     grok.require('zope2.View')
     grok.name('fragment')
 
+    @memoize
+    def socialLinks(self):
+        registry = queryUtility(IRegistry)
+        if registry is None:
+            return []
+        settings = registry.forInterface(ITCAASettings, check=False)
+        social_links = []
+        for setting in settings.social_links:
+            title, url = setting.split('|')
+            social_links.append({'title':title, 'url':url})
+        return social_links
 
-    
-
-    

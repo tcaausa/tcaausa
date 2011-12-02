@@ -8,5 +8,6 @@
     <permission id="tcaa.AddSection"        title="TCAA: Add Section" />
     <permission id="tcaa.AddLinksPage"      title="TCAA: Add Links Page" />
     <permission id="tcaa.AddContactPage"    title="TCAA: Add Contact Page" />
+    <permission id="tcaa.ChangeSettings"    title="TCAA: Change Settings" />
 
 </configure>
