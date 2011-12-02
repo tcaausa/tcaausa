@@ -41,6 +41,12 @@
             theme-children="/html/head"
             />
 
+        <!-- drop plone shortcut icon and add tcaas -->
+        <drop content="/html/head/link[@rel='shortcut icon']" />
+        <after theme-children="/html/head">
+            <link rel="shortcut icon" type="image/x-icon" href="/++theme++tcaa.theme/favicon.ico" />
+        </after>
+
         <!-- navigation -->
         
         <replace css:content="#tcaa-navigation"
