@@ -105,10 +105,6 @@ class Renderer(base.Renderer):
             return '#'
         return 'http://twitter.com/#!/%s' % settings.twitter_account
 
-
-
-
-
     @memoize
     def _data(self):
         pc = getToolByName(self.context, 'portal_catalog')
