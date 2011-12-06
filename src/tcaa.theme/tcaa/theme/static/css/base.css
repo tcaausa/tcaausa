@@ -28,7 +28,7 @@ body                                { background:#c6d4dd url(../img/bg.gif); col
 #page-channels                      { margin:8px 0; }
 #page-channels ul                   { margin:0; padding:0; }
 #page-channels li                   { float:left; margin-right:5px; }
-#page-channels li a                 { display:block; width:17px; height:13px; text-indent:-99999px; }
+#page-channels li a                 { display:block; width:17px; height:13px; text-indent:-99999px; outline:0; }
 #page-channels li.channel-email a      { background:url(../img/icons/email.gif) no-repeat; }
 #page-channels li.channel-facebook a   { background:url(../img/icons/facebook.gif) no-repeat; }
 #page-channels li.channel-twitter a    { background:url(../img/icons/twitter.gif) no-repeat; }

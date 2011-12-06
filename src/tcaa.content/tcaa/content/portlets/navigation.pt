@@ -25,6 +25,19 @@
             </li>
         </tal:sections>
         </ul>
+        <div id="page-twitter">
+            <h2>Twitter</h2>
+            <ul id="twitter_update_list"></ul>
+            <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+            <script type="text/javascript" tal:attributes="src view/twitter_feed"></script>
+        </div>
+        <div id="page-channels">
+            <ul>
+                <li class="channel-email"><a tal:attributes="href view/email">Email</a></li>
+                <li class="channel-facebook"><a tal:attributes="href view/facebook">Facebook</a></li>
+                <li class="channel-twitter"><a tal:attributes="href view/twitter">Twitter</a></li>
+            </ul>
+        </div>
     </dd>
     <dd class="portletFooter">
         <span class="portletBottomLeft"></span>

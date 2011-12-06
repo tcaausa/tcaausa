@@ -16,9 +16,11 @@ from zope import schema
 from zope.formlib import form
 from zope.interface import implements
 from zope.component import getMultiAdapter
+from zope.component import queryUtility
 
 from plone.app.portlets.portlets import base
 from plone.memoize.instance import memoize
+from plone.registry.interfaces import IRegistry
 from plone.portlets.interfaces import IPortletDataProvider
 
 from Products.ATContentTypes.interfaces.link import IATLink
@@ -26,6 +28,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 
 from tcaa.content.interfaces import ITCAAContentish
+from tcaa.content.interfaces import ITCAASettings
 from tcaa.content.section import ISection
 from tcaa.content.basepage import IBasePage
 
@@ -67,6 +70,44 @@ class Renderer(base.Renderer):
         #pageData = getMultiAdapter((self.context, self.request), name="pagedata")
         #return pageData.createTree()
         return self._data()
+
+    def _get_tcaa_settings(self):
+        registry = queryUtility(IRegistry)
+        if registry is None:
+            return None 
+        return registry.forInterface(ITCAASettings, check=False)
+         
+    @memoize
+    def twitter_feed(self):
+        settings = self._get_tcaa_settings()
+        if settings == None:
+            return ''
+        return "http://twitter.com/statuses/user_timeline/%s.json?callback=twitterCallback2&count=1" % (settings.twitter_account,)
+   
+    @memoize
+    def email(self):
+        settings = self._get_tcaa_settings()
+        if settings == None:
+            return '#'
+        return 'mailto:%s' % settings.email_account
+    
+    @memoize
+    def facebook(self):
+        settings = self._get_tcaa_settings()
+        if settings == None:
+            return '#'
+        return 'http://www.facebook.com/%s' % settings.facebook_account
+
+    @memoize
+    def twitter(self):
+        settings = self._get_tcaa_settings()
+        if settings == None:
+            return '#'
+        return 'http://twitter.com/#!/%s' % settings.twitter_account
+
+
+
+
 
     @memoize
     def _data(self):

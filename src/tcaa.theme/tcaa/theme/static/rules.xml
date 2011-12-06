@@ -48,11 +48,15 @@
         </after>
 
         <!-- navigation -->
-        
         <replace css:content="#tcaa-navigation"
                  css:theme-children="#page-menu" />
-
+        <replace css:content="#page-twitter"
+                 css:theme="#page-twitter" />
+        <replace css:content="#page-channels" 
+                 css:theme="#page-channels" />
+        <!-- content -->
         <replace css:content-children="#content-core"
                  css:theme-children=".scroll-sect" />
+
     </rules>
 </rules>

@@ -3,7 +3,7 @@
 
     <!-- disabled plone javascript for TCAA theme 
          Using jquery 1.7 in theme so disabling plone standard -->
-    <javascript id="jquery.js"                          expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
+    <!-- <javascript id="jquery.js"                          expression="not:request/HTTP_X_THEME_ENABLED | nothing" /> -->
 
     <!-- TCAA theme javascript -->
     <javascript id="++theme++tcaa.theme/js/lib/jquery/1.7/jquery.min.js"                            expression="request/HTTP_X_THEME_ENABLED | nothing" />
