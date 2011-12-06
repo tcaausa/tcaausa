@@ -44,12 +44,12 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
 
     borderColor = schema.TextLine(
             title=u"Border Color",
-            description=u"A hex value for the border color of text on this page",
+            description=u"A hex value for the border color of text on this page e.g. '3fe3b2'. Leave blank for no border.",
             required=False,
         )
     backgroundColor = schema.TextLine(
             title=u"Background Color",
-            description=u"A hex value for the background color of text on this page",
+            description=u"A hex value for the background color of text on this page e.g. '3fe3b2'. Leave blank for a transparent background.",
             required=False,
         )
     backgroundImage = NamedBlobImage(
