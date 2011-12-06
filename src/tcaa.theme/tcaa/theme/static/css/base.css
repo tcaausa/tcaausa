@@ -79,8 +79,8 @@ a                                   { text-decoration:None; }
 
 .featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-right:9px;}
-.featured-title                     { width:272px; height:20px; position:relative; top:-290px; padding:22px 5px 22px 5px; }
-.featured-title-background          { width:272px; height:20px; position:relative; top:-229px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
+.featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
+.featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
 .featured-pages a                   { color:#000; font-family: 'Droid Serif',serif; }
 
