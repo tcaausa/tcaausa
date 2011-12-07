@@ -32,28 +32,35 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
     """
 
     content = RichText(
-            title=u"Page Content",
+            title=u"Content",
             description=u"Rich text for page",
         )
 
     content_layout = schema.Choice(
-            title=u"Page Content Layout",
+            title=u"Content Layout",
             description=u"Position at which the above text content should be displayed",
             vocabulary=content_layout_options,
         )
 
     borderColor = schema.TextLine(
-            title=u"Border Color",
+            title=u"Content Border Color",
             description=u"A hex value for the border color of text on this page e.g. '3fe3b2'. Leave blank for no border.",
             required=False,
         )
     backgroundColor = schema.TextLine(
-            title=u"Background Color",
+            title=u"Content Background Color",
             description=u"A hex value for the background color of text on this page e.g. '3fe3b2'. Leave blank for a transparent background.",
             required=False,
         )
+
+    pageBackgroundColor = schema.TextLine(
+            title=u"Page Background Color",
+            description=u"a hex value for the background color the page. Leave blank for default.",
+            required=False,
+        )
+
     backgroundImage = NamedBlobImage(
-            title=u"Background Image (875 x 568)",
+            title=u"Page Background Image (875 x 568)",
             description=u"An image used for the background of this page",
             required=False,
         )

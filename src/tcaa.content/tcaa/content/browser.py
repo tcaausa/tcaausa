@@ -130,17 +130,20 @@ class CustomPageStyle(grok.View):
         context = aq_inner(self.context)
         scales = getMultiAdapter((context, self.request), name='images')
         scale = scales.scale('backgroundImage', width=875, height=568)
-        if scale is None:
-            self.style = None
-        else:
-#            margin = ""
-#            if self.request.get('HTTP_X_THEME_ENABLED'):
-#                # only apply this margin when handling requests 
-#                # via Diazo
-#                margin = "margin:-100px -80px;"
-            margin = "margin:-100px -80px;"
-            self.style = "background:url(%s) no-repeat 0 0; %s height:568px; padding:100px 80px;" % (scale.url, margin)
 
+        if scale is None and context.pageBackgroundColor == '':
+            self.style = None
+            return
+
+        self.style = "height:568px; padding:100px 80px; margin:-100px -80px;"
+        bg_img = ''
+        bg_color = ''
+        if scale:               
+            bg_img = "url(%s) no-repeat 0 0" % (scale.url)
+        if context.pageBackgroundColor:
+            bg_color = "#%s" % context.pageBackgroundColor
+        self.style = "%s background:%s %s;" % (self.style, bg_img, bg_color)
+               
     def render(self):
         #return self.style
         return self
