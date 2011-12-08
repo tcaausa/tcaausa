@@ -23,7 +23,8 @@ body                                { background:#ffffff; color:#555; font-famil
 
 #page-twitter                       { border-top:1px solid #fff; margin-top:25px; padding-top:25px; }
 #page-twitter h2                    { font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; }
-#page-twitter p                     { font-size:11px; line-height:16px; margin:0; }
+#page-twitter span                  { font-size:11px; line-height:16px; margin:0; display:block; }
+#page-twitter a                     { color:#00aeff; }
 
 #page-channels                      { margin:8px 0; }
 #page-channels ul                   { margin:0; padding:0; }
