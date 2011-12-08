@@ -21,7 +21,7 @@ body                                { background:#ffffff; color:#555; font-famil
 #page-menu ul.sub li                { margin:0; font-size:11px; line-height:15px; }
 #page-menu li.active ul.sub         { display:block; }
 
-#page-twitter                       { border-top:1px solid #fff; margin-top:25px; padding-top:25px; height:150px; }
+#page-twitter                       { border-top:1px solid #fff; margin-top:25px; padding-top:25px; }
 #page-twitter h2                    { font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; }
 #page-twitter p                     { font-size:11px; line-height:16px; margin:0; }
 
