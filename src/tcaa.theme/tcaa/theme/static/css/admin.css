@@ -69,6 +69,15 @@ a                                   { text-decoration:None; }
 .contactpage table.invisible td,
 .contactpage table.invisible th     { padding:0 10px 0 0; }
 
+/* Typography */
+#content .scroll-page ul, 
+#content .scroll-page ol            { margin-left: 0; }
+#content pre                        { padding: 0; background:None; color:#555; }
+#content .scroll-page .pullquote    { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; letter-spacing:0 !important;}
+#content .scroll-page .visualHighlight  { padding:2px; }
+.scroll-page ul li                  { list-style: inside; list-style-type: disc; }
+.scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
+
 /* Page Layout exceptions */
 div.homepage                        { padding-top:35px !important; }
 div.linkspage .featured-pages       { top: 40px; }
@@ -77,3 +86,12 @@ div.linkspage .featured-pages       { top: 40px; }
 .portletTCAANavigation              { display:none; }
 #content ul                         { list-style-type:none; }
 #content .scroll-sect-footer a:link { border-bottom: none; }
+
+/* tinymce */
+.mceContentBody h1,
+.mceContentBody h2,
+.mceContentBody h3,
+.mceContentBody h4,
+.mceContentBody h5,
+.mceContentBody h6                  { color: #000; }
+

@@ -44,6 +44,7 @@ a                                   { text-decoration:None; }
 .fl                                 { float:left; }
 .fr                                 { float:right; }
 .clear                              { clear:both; }
+.visualClear                        { clear:both; }
 
 
 /* Feature-specific */
@@ -101,3 +102,12 @@ a                                   { text-decoration:None; }
 /* Page Layout exceptions */
 div.homepage                        { padding-top:35px !important; }
 div.linkspage .featured-pages       { top: 40px; }
+
+/* Typography */
+.scroll-page ul li                  { list-style: inside; list-style-type: disc; }
+.scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
+.scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }
+.scroll-page .callout               { background:#eee; border-left:1em solid #ccc; clear:both; padding:1em; }
+.scroll-page .discreet              { color:#666; font-size:85%; font-weight:normal; }
+.scroll-page .visualHighlight       { background:#ffb; padding:2px; }
+.scroll-page table th               { font-weight:bold; }
