@@ -248,7 +248,7 @@ var Controller = new (function(){
         var pages = sect.find('.scroll-page');
         var x1 = -(parseInt(sect.css('left'), 10) || 0);
         for (var i=0; i<pages.length; i++) {
-            var x2 = pages.eq(i).position().left
+            var x2 = pages.eq(i).position().left;
             if (x2 == x1) return i;
         }
     }
