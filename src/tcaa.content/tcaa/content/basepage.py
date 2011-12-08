@@ -20,6 +20,8 @@ from plone.z3cform.textlines.textlines import TextLinesFieldWidget
 content_layout_options = SimpleVocabulary(
         [SimpleTerm(value=u"content-left",          title=u"Align Left"),
          SimpleTerm(value=u"content-right",         title=u"Align Right"),
+         SimpleTerm(value=u"content-bottom-left",   title=u"Bottom Left"),
+         SimpleTerm(value=u"content-bottom-right",  title=u"Bottom Right"),
          SimpleTerm(value=u"content-wide",          title=u"Fill width"),]
     )
 
