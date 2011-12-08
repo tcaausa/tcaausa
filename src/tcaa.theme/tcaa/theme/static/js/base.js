@@ -23,7 +23,7 @@ var Controller = new (function(){
         this.pageData = pageData;
 
         this.container = $('.scroll');
-        this.sidebar = $('#page-sidebar')
+        this.sidebar = $('#page-sidebar');
         
         var currentContent = this.container.find('.scroll-page').children().remove();
         var currentUrl = this.getHashBangUrl(location.hash);
@@ -77,7 +77,7 @@ var Controller = new (function(){
         // Set the highlighted and toggled open state of the top-level
         // menu items when clicked on.
         // 
-        // This is actually already handled by updateSectStatus, but 
+        // This is actually already handled by updateSectFooter, but 
         // that's triggered when the animated scrolling arrives at a 
         // page, rather than when the link is clicked.
         //
@@ -114,6 +114,8 @@ var Controller = new (function(){
 
             menu.append(item);
         }
+
+        this.updateSectFooter(sect);
     }
 
     this.initLinks = function(context) {
@@ -303,7 +305,7 @@ var Controller = new (function(){
         // It this is the initial page load, set everything up immediately
         // otherwise animate it all into place in one or more queued stages. 
         
-        var doneFn = function(){ self.updateSectStatus(sectIndexB, pageIndexB); }
+        var doneFn = function(){ self.updateSectFooter(sectIndexB, pageIndexB); self.updateMenu(sect); }
         var pageFn = (sectCss) ? function(){ sect.animate(sectCss, { 'complete':doneFn }); } : doneFn;
         var sectFn = (bodyCss) ? function(){ body.animate(bodyCss, { 'complete':pageFn }); } : pageFn;
 
@@ -316,7 +318,7 @@ var Controller = new (function(){
         }
     }
 
-    this.updateSectStatus = function(sect, page) {
+    this.updateSectFooter = function(sect, page) {
         if (typeof sect == 'number') sect = this.getSect(sect);
         if (typeof page == 'number') page = this.getPage(sect, page);
         
@@ -331,7 +333,10 @@ var Controller = new (function(){
         var footer = this.getSectFooter(sect);
         footer.find('.scroll-sect-title').text(pageTitle);
         footer.find('.scroll-sect-menu li a').removeClass('active').eq(pageIndex).addClass('active');
+    }
 
+    this.updateMenu = function(sect) {
+        var sectIndex = (typeof sect == 'number') ? sect : sect.data('sect-index');
         this.sidebar.find('#page-menu ul.top > li').removeClass('active').eq(sectIndex).addClass('active');
     }
 
