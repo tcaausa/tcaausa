@@ -57,7 +57,7 @@ a                                   { text-decoration:None; }
 .content-wide                       { width:100%;  padding:20px; }
 
 .featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
-.featured-pages div.fl              { width:282px; height:224px; margin-right:9px;}
+.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-right:9px;}
 .featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
@@ -79,6 +79,10 @@ a                                   { text-decoration:None; }
 #content .scroll-page .visualHighlight  { padding:2px; }
 .scroll-page ul li                  { list-style: inside; list-style-type: disc; }
 .scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
+#content .featured-pages a:link     { color:#000 !important;}
+#content .featured-pages a:hover    { color:#000 !important;}
+#content .featured-pages a:visited  { color:#000 !important;}
+#content .featured-pages a:active   { color:#000; }
 
 /* Page Layout exceptions */
 div.homepage                        { padding-top:35px !important; }
@@ -86,6 +90,9 @@ div.linkspage .featured-pages       { top: 40px; }
 
 /* Admin specific */
 .portletTCAANavigation              { display:none; }
+#content h1,
+#content h2                         { letter-spacing: 0; line-height: 18px; }
+#content p                          { margin-bottom: 10px; }
 #content ul                         { list-style-type:none; }
 #content .scroll-sect-footer a:link { border-bottom: none; }
 
