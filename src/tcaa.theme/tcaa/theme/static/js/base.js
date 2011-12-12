@@ -70,6 +70,7 @@ var Controller = new (function(){
 
         this.initMenu();
         this.initLinks();
+        this.initResizing();
         this.initialised = true;
     }
 
@@ -90,6 +91,17 @@ var Controller = new (function(){
             items.removeClass('active');
             $(this).closest('li').addClass('active');
         });
+    }
+
+    this.initResizing = function() {
+        $(window).resize(function(){
+
+            var fullHeight = self.container.height();
+            var pageHeight = fullHeight / self.pageData.length;
+
+            var diff = $(window).height() - pageHeight;
+            if (diff > 0) self.container.css({ 'paddingBottom':diff });
+        }).resize();
     }
 
     this.initSectFooter = function(sect, menuData) {
