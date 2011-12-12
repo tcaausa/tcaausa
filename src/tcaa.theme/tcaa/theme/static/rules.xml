@@ -30,6 +30,12 @@
               content="/html/body"
               theme="/html/body" />
 
+        <!-- Here we're applyling cms customised styles to the body -->
+        <copy attributes="style"
+              css:content="#dummy_body"
+              theme="/html/body" />
+        <drop css:content="#dummy_body" />
+
         <drop theme="/html/head/base" />
         <drop theme="/html/head/style" />
         <drop theme="/html/head/script" />
@@ -47,6 +53,12 @@
         <after theme-children="/html/head">
             <link rel="shortcut icon" type="image/x-icon" href="/++theme++tcaa.theme/favicon.ico" />
         </after>
+
+        <!-- logo -->
+        <copy attributes="style"
+              css:content="#dummy_logo"
+              css:theme="#page-logo a"/>
+        <drop css:content="#dummy_logo" />
 
         <!-- navigation -->
         <replace css:content="#tcaa-navigation"

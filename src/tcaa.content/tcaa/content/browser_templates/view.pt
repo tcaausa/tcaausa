@@ -11,9 +11,20 @@
         <script tal:replace="structure context/@@pagedata"></script>
     </metal:headjs>
 </head>
-<body>
+<body> 
 <metal:content-core fill-slot="content-core">
     <metal:content-core define-macro="content-core">
+        <tal:assets tal:define="assets context/@@assets;">
+        <div tal:condition="assets/background" id="dummy_body" 
+        tal:attributes="style string:background:url(${assets/background}) repeat scroll 0 0;">
+        <!-- used to pass body style up to the styling engine -->
+        </div>
+        <div tal:condition="assets/logo" id="dummy_logo"
+            tal:attributes="style string:background:url(${assets/logo}) no-repeat scroll 0 0 transparent;">
+            <!-- used to pass logo style up to the styling engine -->
+        </div>
+        </tal:assets>
+
 
         <div class="scroll-sect-content">
 
