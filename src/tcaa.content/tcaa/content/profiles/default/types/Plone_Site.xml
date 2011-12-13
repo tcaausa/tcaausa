@@ -16,7 +16,7 @@
   <element value="tcaa.content.Page" />
   <element value="tcaa.content.LinksPage" />
   <element value="tcaa.content.ContactPage" />
-  <element value="tcaa.content.HomePage" />
+  <element value="tcaa.content.Homepage" />
   <element value="tcaa.content.Section" />
   <element value="Link" />
  </property>
