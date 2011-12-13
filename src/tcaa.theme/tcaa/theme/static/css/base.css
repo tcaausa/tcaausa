@@ -17,8 +17,8 @@ body                                { background:#ffffff; color:#555; font-famil
 #page-menu li a:hover               { color:#80d7ff; }
 #page-menu li.active a              { color:#00aeff; }
 
-#page-menu ul.sub                   { margin-top:3px; margin-left:15px; display:none; }
-#page-menu ul.sub li                { margin:0; font-size:11px; line-height:15px; }
+#page-menu ul.sub                   { margin-top:3px; margin-left:8px; display:none; }
+#page-menu ul.sub li                { margin:5px 0 0 0; font-size:11px; line-height:12px; }
 #page-menu li.active ul.sub         { display:block; }
 
 #page-twitter                       { border-top:1px solid #fff; margin-top:25px; padding-top:25px; }
