@@ -1,4 +1,3 @@
-
 var Controller = new (function(){
     var self = this;
 
@@ -55,7 +54,6 @@ var Controller = new (function(){
                 } else if (currentUrl == url || !j) {
                     this.loadPage(page);
                 }
-
                 sect.append(page);
 
                 this.pageIndicesByUrl[url] = [i,j];
@@ -368,9 +366,17 @@ var Controller = new (function(){
         } else {
             page.load(this.getUrlByPage(page), function(){
                 self.initHashBangLinks();
+                self.initFlowPlayer(page);
             });
         }
         page.data('loaded', true);
+    }
+
+    this.initFlowPlayer = function(page) {
+        if (window.collective_flowplayer !== undefined) {
+            var player = page.find('.autoFlowPlayer a');
+            player.flowplayer(window.collective_flowplayer.params);
+        }
     }
 
 });

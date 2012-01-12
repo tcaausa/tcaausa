@@ -28,7 +28,7 @@
 
     <!-- TCAA theme javascript -->
     <javascript id="++theme++tcaa.theme/js/lib/jquery/1.7/jquery.min.js"                            expression="request/HTTP_X_THEME_ENABLED | nothing" 
-                                                                                                    compression="none"                                  />
+                                                                                                    compression="none" insert-after="jquery.js"         />
 
     <javascript id="++theme++tcaa.theme/js/lib/jquery-hashchange/1.3/jquery.ba-hashchange.min.js"   expression="request/HTTP_X_THEME_ENABLED | nothing" />
     <javascript id="++theme++tcaa.theme/js/base.js"                                                 expression="request/HTTP_X_THEME_ENABLED | nothing" />

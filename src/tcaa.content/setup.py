@@ -30,6 +30,7 @@ setup(name='tcaa.content',
           'plone.app.referenceablebehavior',
           'plone.app.relationfield',
           'plone.namedfile [blobs]',
+          'collective.flowplayer', 
       ],
       extras_require={
           'test': ['plone.app.testing'],
