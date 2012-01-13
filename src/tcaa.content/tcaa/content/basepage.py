@@ -72,3 +72,24 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             required=False,
         )
 
+
+    form.fieldset('seo',
+            label=u"SEO Options",
+            fields=['metaTitle', 'metaDescription','metaKeywords'],
+            )
+    metaTitle = schema.TextLine(
+            title=u"Meta Title",
+            description=u"Content of the meta:title tag for this page",
+            required=False,
+            )
+    metaDescription = schema.TextLine(
+            title=u"Meta Description",
+            description=u"Content of the meta:description tag for this page",
+            required=False,
+            )
+    metaKeywords = schema.TextLine(
+            title=u"Meta Keywords",
+            description=u"Content of the meta:keywords tag for this page - a comma separated list",
+            required=False,
+            )
+    
