@@ -46,6 +46,7 @@ a                                   { text-decoration:None; }
 .fr                                 { float:right; }
 .clear                              { clear:both; }
 .visualClear                        { clear:both; }
+.image-center                       { margin:auto; }
 
 
 /* Feature-specific */

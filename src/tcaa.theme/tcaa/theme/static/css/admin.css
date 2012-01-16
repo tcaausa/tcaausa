@@ -21,7 +21,7 @@ a                                   { text-decoration:None; }
 .fl                                 { float:left; }
 .fr                                 { float:right; }
 .clear                              { clear:both; }
-
+.image-center                       { margin:auto; }
 
 /* Feature-specific */
 
