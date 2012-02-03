@@ -52,6 +52,8 @@
         <drop content="/html/head/meta[@name='viewport']" />
         <after theme-children="/html/head">
             <link rel="shortcut icon" type="image/x-icon" href="/++theme++tcaa.theme/favicon.ico" />
+            <script type="text/javascript" src="http://use.typekit.com/ygy2eqb.js"></script>
+            <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         </after>
 
         <!-- logo -->

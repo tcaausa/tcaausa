@@ -34,4 +34,5 @@
     <javascript id="++theme++tcaa.theme/js/base.js"                                                 expression="request/HTTP_X_THEME_ENABLED | nothing" />
     
 
+    <javascript id="++theme++tcaa.theme/js/mce_typekit.js"                  expression="not:request/HTTP_X_THEME_ENABLED | nothing" />
 </object>
