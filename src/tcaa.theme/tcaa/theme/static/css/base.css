@@ -16,14 +16,14 @@ body                                { background:#ffffff; color:#555; font-famil
 #page-menu li                       { margin:3px 0; font-size:17px; } 
 #page-menu li a                     { color:#000; text-decoration:none; outline:0;}
 #page-menu li a:hover               { color:#282971; }
-#page-menu li.active a              { color:#666; }
+/*#page-menu li.active a              { color:#666; } */
 
-#page-menu ul.sub                   { margin-top:3px; margin-left:8px; display:none; }
-#page-menu ul.sub li                { margin:5px 0 0 0; font-size:11px; line-height:12px; }
+#page-menu ul.sub                   { margin-top:3px; margin-left: 2px; display:none; }
+#page-menu ul.sub li                { margin:13px; font-size:11px; line-height:12px; }
 #page-menu li.active ul.sub         { display:block; }
 
 #page-twitter                       { border-top:1px solid #282971; margin-top:25px; padding-top:25px; }
-#page-twitter h2                    { font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; color:#282971; }
+#page-twitter h2                    { font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; color:#282971; }
 #page-twitter span                  { font-size:11px; line-height:16px; margin:0; display:block; }
 #page-twitter a                     { color:#00aeff; }
 
@@ -84,8 +84,9 @@ a                                   { text-decoration:None; }
 .content-bottom-right               { width:380px; padding:20px; float:right; margin-top:200px; }
 .content-wide                       { width:100%;  padding:20px; }
 
-.featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
-.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-right:9px;}
+.featured-pages                     { width:875px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
+.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:14px;}
+.featured-pages div.newrow          { margin-left:0px; }
 .featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
