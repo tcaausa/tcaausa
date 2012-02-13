@@ -38,6 +38,8 @@ tcaa/theme/static/css/utility.css
 tcaa/theme/static/img/bg.gif
 tcaa/theme/static/img/contenttypes-sprite.png
 tcaa/theme/static/img/logo.gif
+tcaa/theme/static/img/tcaa_orig_flat.png
+tcaa/theme/static/img/tcaa_white_flat.png
 tcaa/theme/static/img/icons/email.gif
 tcaa/theme/static/img/icons/facebook.gif
 tcaa/theme/static/img/icons/twitter.gif

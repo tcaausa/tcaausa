@@ -43,7 +43,9 @@ tcaa/content/profiles/default/metadata.xml
 tcaa/content/profiles/default/portlets.xml
 tcaa/content/profiles/default/registry.xml
 tcaa/content/profiles/default/rolemap.xml
+tcaa/content/profiles/default/tinymce.xml
 tcaa/content/profiles/default/types.xml
+tcaa/content/profiles/default/viewlets.xml
 tcaa/content/profiles/default/types/Plone_Site.xml
 tcaa/content/profiles/default/types/tcaa.content.Assets.xml
 tcaa/content/profiles/default/types/tcaa.content.ContactPage.xml
@@ -55,3 +57,6 @@ tcaa/content/static/homepage_icon.gif
 tcaa/content/static/linkspage_icon.gif
 tcaa/content/static/page_icon.gif
 tcaa/content/static/section_icon.gif
+tcaa/content/viewlets/__init__.py
+tcaa/content/viewlets/viewlets.py
+tcaa/content/viewlets/viewlets_templates/tcaadublincoreviewlet.pt

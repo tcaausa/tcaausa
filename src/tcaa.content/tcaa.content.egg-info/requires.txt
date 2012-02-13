@@ -5,6 +5,7 @@ plone.app.referenceablebehavior
 plone.app.relationfield
 plone.namedfile [blobs]
 collective.flowplayer
+collective.tinymcetemplates
 
 [test]
 plone.app.testing

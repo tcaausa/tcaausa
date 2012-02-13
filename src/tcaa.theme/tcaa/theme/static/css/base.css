@@ -38,8 +38,9 @@ body                                { background:#ffffff; color:#555; font-famil
 
 /* General */
 
-h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#cdcdcd; }
+h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#808080; }
 h2                                  { font-size:24px; margin-bottom:20px; }
+h3                                  { font-size:18px; font-weight:bold; }
 p                                   { margin:18px 0 10px 0; }
 a                                   { text-decoration:None; }
 
@@ -48,7 +49,7 @@ a                                   { text-decoration:None; }
 .clear                              { clear:both; }
 .visualClear                        { clear:both; }
 .image-center                       { margin:auto; }
-
+.newrow                             { margin-left:0px !important; }
 
 /* Feature-specific */
 
@@ -70,29 +71,36 @@ a                                   { text-decoration:None; }
 .scroll-sect-footer li a.active span { background:#00aeff; }
 
 .scroll-sect-footer::after          { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
-.scroll-sect-footer::after          { width:0; height:0; border:25px solid; border-color:transparent transparent #fff transparent; background:#282971;}
+.scroll-sect-footer::after          { background:url(../img/section_arrow.png) no-repeat;}
 
-.scroll-page                        { padding:100px 80px; width:715px; height:368px; float:left; margin-right:0px; overflow:hidden; }
+/*.scroll-page                        { padding:100px 80px; width:715px; height:368px; float:left; margin-right:0px; overflow:hidden; }*/
+.scroll-page                        { padding:100px 0px; width:875px; height:368px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 
 
 /* Content Layout */
 
-.content-left                       { width:380px; padding:20px; }
-.content-right                      { width:380px; padding:20px; float:right; }
+.content-left                       { width:282px; padding:0px; float:left; margin-left:14px; }
+.content-left:first                 { margin-left:0px; }
+.content-left-wide                  { width:578px; padding:0px; float:left; }
+.content-right-wide                 { width:578px; padding:0px; float:right; }
+.content-full-width                 { width:974px; padding:0px; }
+/*
+.content-right                      { width:282px; padding:0px; float:right; }
 .content-bottom-left                { width:380px; padding:20px; margin-top:200px; }
 .content-bottom-right               { width:380px; padding:20px; float:right; margin-top:200px; }
 .content-wide                       { width:100%;  padding:20px; }
+*/
 
-.featured-pages                     { width:875px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
+.featured-pages                     { width:875px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:14px;}
-.featured-pages div.newrow          { margin-left:0px; }
-.featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
+/* .featured-pages div.newrow          { margin-left:0px; } */
+.featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 14px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
-.featured-pages a                   { color:#000; font-family: 'Droid Serif',serif; }
+.featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
-.contactpage div.fl                 { width:200px; color:#ffffff; font-size}
+.contactpage div.fl                 { width:200px; color:#000; font-size}
 .contactpage div.fl.social          { width:115px; }
 .contactpage .location              { margin-bottom: 50px; }
 .contactpage div.fl p               { margin: 0 0 0 0; }
@@ -111,6 +119,7 @@ div.homepage                        { padding-top:35px !important; }
 div.linkspage .featured-pages       { top: 40px; }
 
 /* Typography */
+.scroll-page h2                     { padding-bottom:15px; border-bottom:1px solid #808080; }
 .scroll-page ul li                  { list-style: inside; list-style-type: disc; }
 .scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
 .scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }

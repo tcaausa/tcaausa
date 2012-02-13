@@ -49,12 +49,19 @@ a                                   { text-decoration:None; }
 
 
 /* Content Layout */
-
+.content-left                       { width:282px; padding:0px; float:left; margin-left:14px; }
+.content-left:first-child           { margin-left:0px; }
+.content-right                      { width:282px; padding:0px; float:right; }
+.content-bottom-left                { width:380px; padding:20px; margin-top:200px; }
+.content-bottom-right               { width:380px; padding:20px; float:right; margin-top:200px; }
+.content-wide                       { width:100%;  padding:20px; }
+/*
 .content-left                       { width:380px; padding:20px; }
 .content-right                      { width:380px; padding:20px; float:right; }
 .content-bottom-left                { width:380px; padding:20px; margin-top:200px; }
 .content-bottom-right               { width:380px; padding:20px; float:right; margin-top:200px; }
 .content-wide                       { width:100%;  padding:20px; }
+*/
 
 .featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; margin:0px -80px -100px -80px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-right:9px;}

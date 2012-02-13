@@ -7,7 +7,11 @@
       tal:attributes="style custom_style/page_style"
       >
 
-    <div tal:attributes="class context/content_layout;
+<!--    <div tal:attributes="class context/content_layout;
+                         style custom_style/content_style;"
+         tal:content="structure context/content/output"></div>
+     -->
+    <div tal:attributes="
                          style custom_style/content_style;"
          tal:content="structure context/content/output"></div>
 

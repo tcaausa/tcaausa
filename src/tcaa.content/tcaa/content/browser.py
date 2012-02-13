@@ -135,7 +135,8 @@ class CustomPageStyle(grok.View):
             self.style = None
             return
 
-        self.style = "height:568px; padding:100px 80px; margin:-100px -80px;"
+        #self.style = "height:568px; padding:100px 80px; margin:-100px -80px;"
+        self.style = "height:568px; padding:100px 0px; margin:-100px 0px;"
         bg_img = ''
         bg_color = ''
         if scale:               
