@@ -93,7 +93,7 @@ a                                   { text-decoration:None; }
 */
 
 .featured-pages                     { width:875px; position:absolute; top:284px; }
-.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:14px;}
+.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:11px; border:1px solid #000;}
 /* .featured-pages div.newrow          { margin-left:0px; } */
 .featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 14px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
