@@ -19,11 +19,43 @@
         <div class="zone"       tal:content="structure context/zoneThree/output" />
     </div>
     <div class="fl social"      tal:define="social_links view/socialLinks">
+       <h3>Contact Us Direct</h3>
+       <div id="contact-form">
+        <form action=".">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="text" name="email"/></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea name="message"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        Your contact details and message
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="send"/></td>
+                </tr>
+            </table>
+        </form>
+       </div>
+        <div id="social-links">
         <h3>Follow Us</h3>
         <p>
             <a tal:repeat="link social_links"
                tal:attributes="href link/url"
-               tal:content="link/title"/>
+               tal:content="link/title">title here</a>
         </p>
+        </div>
+ 
     </div>
 </div>

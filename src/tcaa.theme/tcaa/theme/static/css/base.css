@@ -100,16 +100,26 @@ a                                   { text-decoration:None; }
 .featured-pages img                 {  }
 .featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
-.contactpage div.fl                 { width:200px; color:#000; font-size}
-.contactpage div.fl.social          { width:115px; }
+.contactpage                        { background:#666; }
+.contactpage div.fl                 { width:180px; margin:11px; color:#eee; font-size}
+.contactpage div.fl.social          { width:239px; margin-right:8px;}
 .contactpage .location              { margin-bottom: 50px; }
 .contactpage div.fl p               { margin: 0 0 0 0; }
 .contactpage div.fl a               { display:block; }
+.contactpage table                  { width:100%; }
 .contactpage table.invisible td,
 .contactpage table.invisible th     { padding:0 10px 0 0; }
+.contactpage .social h3             { margin-top:3px; }
+.contactpage #contact-form          { margin-bottom:30px; }
+.contactpage input,
+.contactpage textarea               { width:100%; }
+.contactpage h2,
+.contactpage h3                     { color:#ccc; }
+.scroll-page .contactpage h2        { border-bottom:1px solid #000; }
+.contactpage label                  { color:#000; }
 
 .social h3                          { margin-bottom:9px; }
-.social a                           { color:#fff; font-weight:bold; }
+.social a                           { color:#000; font-weight:bold; }
 .social a:hover                     { color:#00008F; }
 .social a:active                    { color:#00aeff; }
 
