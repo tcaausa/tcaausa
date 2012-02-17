@@ -92,4 +92,10 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             description=u"Content of the meta:keywords tag for this page - a comma separated list",
             required=False,
             )
-    
+   
+    # Depricated fields:
+    form.omitted('content_layout')
+    form.omitted('borderColor')
+    form.omitted('backgroundColor')
+
+
