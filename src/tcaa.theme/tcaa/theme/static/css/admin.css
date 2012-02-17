@@ -58,22 +58,34 @@ a                                   { text-decoration:None; }
 .content-right-wide                 { width:578px; padding:0px; float:right; }
 .content-full-width                 { width:974px; padding:0px; }
 
-.featured-pages                     { width:875px; padding:5px; position:absolute; top:284px; }
-.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-right:9px;}
+.featured-pages                     { width:875px; position:absolute; top:284px; }
+.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:11px; border:1px solid #000; }
 .featured-title                     { width:272px; height:20px; position:relative; top:-286px; padding:22px 5px 22px 5px; }
 .featured-title-background          { width:272px; height:20px; position:relative; top:-224px; background: #fff; opacity:0.5; padding: 22px 5px 22px 5px; }
 .featured-pages img                 {  }
-.featured-pages a                   { color:#000; font-family: 'Droid Serif',serif; }
+.featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
-.contactpage div.fl                 { width:200px; color:#ffffff; font-size}
-.contactpage div.fl.social          { width:115px; }
+.contactpage                        { background:#666; }
+.contactpage div.fl                 { width:180px; margin:11px; color:#eee; }
+.contactpage div.fl.social          { width:239px; margin-right:8px; }
 .contactpage .location              { margin-bottom: 50px; }
 .contactpage div.fl p               { margin: 0 0 0 0; }
 .contactpage div.fl a               { display:block; }
+.contactpage table                  { width:100%; }
 .contactpage table.invisible td,
 .contactpage table.invisible th     { padding:0 10px 0 0; }
+.contactpage .social h3             { margin-top:3px; }
+.contactpage #contact-form          { margin-bottom:30px; }
+.contactpage input,
+.contactpage textarea               { width:100%; }
+.contactpage h2,
+.contactpage h3                     { color:#ccc; }
+.scroll-page .contactpage h2        { border-bottom:1px solid #000; }
+.contactpage label                  { color:#000; }
+
 
 /* Typography */
+#content                            { line-height:17px; }
 #content .scroll-page h2            { padding-bottom:15px; border-bottom:1px solid #808080; }
 #content .scroll-page ul, 
 #content .scroll-page ol            { margin-left: 0; }
