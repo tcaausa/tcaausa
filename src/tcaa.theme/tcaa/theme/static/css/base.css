@@ -67,9 +67,9 @@ strong                              { font-weight:bold; }
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
 .scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }
-.scroll-sect-footer li a span       { background:#0138c5; display:block; width:20px; height:5px; }
-.scroll-sect-footer li a:hover span { background:#0071dd; }
-.scroll-sect-footer li a.active span { background:#00aeff; }
+.scroll-sect-footer li a span       { background:#aa1100; display:block; width:20px; height:5px; }
+.scroll-sect-footer li a:hover span { background:#ff5500; }
+.scroll-sect-footer li a.active span { background:#ff3300; }
 
 .scroll-sect-footer::after          { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
 .scroll-sect-footer::after          { background:url(../img/section_arrow.png) no-repeat;}
@@ -102,7 +102,7 @@ strong                              { font-weight:bold; }
 .featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
 .contactpage                        { background:#666; }
-.contactpage div.fl                 { width:180px; margin:11px; color:#eee; font-size}
+.contactpage div.fl                 { width:180px; margin:11px; color:#eee; }
 .contactpage div.fl.social          { width:239px; margin-right:8px;}
 .contactpage .location              { margin-bottom: 50px; }
 .contactpage div.fl p               { margin: 0 0 0 0; }
