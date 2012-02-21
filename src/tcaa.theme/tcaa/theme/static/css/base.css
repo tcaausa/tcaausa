@@ -100,7 +100,7 @@ strong                              { font-weight:bold; }
 .featured-pages img                 {  }
 .featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
-.contactpage                        { background:#666; }
+.contactpage                        { background:#666; } /* border-top:13px solid black; } */
 .contactpage div.fl                 { width:180px; margin:11px; color:#eee; }
 .contactpage div.fl.social          { width:239px; margin-right:8px;}
 .contactpage .location              { margin-bottom: 50px; }
@@ -112,7 +112,7 @@ strong                              { font-weight:bold; }
 .contactpage .social h3             { margin-top:3px; }
 .contactpage #contact-form          { margin-bottom:30px; }
 .contactpage input,
-.contactpage textarea               { width:100%; }
+.contactpage textarea               { width:100%; margin:2px; resize:none; border:1px solid #000;}
 .contactpage h2,
 .contactpage h3                     { color:#ccc; }
 .scroll-page .contactpage h2        { border-bottom:1px solid #000; }
@@ -122,6 +122,17 @@ strong                              { font-weight:bold; }
 .social a                           { color:#000; font-weight:bold; }
 .social a:hover                     { color:#00008F; }
 .social a:active                    { color:#00aeff; }
+
+/* message popup */
+.messagepop                         { background-color: #fff; color:#808080; border:1px solid #000; 
+                                      cursor:default; display:none; margin-top:15px; 
+                                      position:absolute; left:160px; text-align:left; width:394px; z-index:50; 
+                                      padding:25px 25px 20px;
+                                      box-shadow:6px 6px 25px #444; 
+                                      -moz-box-shadow:6px 6px 25px #444; 
+                                      -webkit-box-shadow:6px 6px 25px #444; 
+                                      border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;
+}
 
 
 /* Page Layout exceptions */

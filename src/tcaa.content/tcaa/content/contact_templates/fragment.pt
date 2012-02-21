@@ -25,15 +25,15 @@
             <table>
                 <tr>
                     <td><label for="name">Name:</label></td>
-                    <td><input type="text" name="name"/></td>
+                    <td><input id="name" type="text" name="name"/></td>
                 </tr>
                 <tr>
                     <td><label for="email">Email:</label></td>
-                    <td><input type="text" name="email"/></td>
+                    <td><input id="email" type="text" name="email"/></td>
                 </tr>
                 <tr>
                     <td><label for="message">Message:</label></td>
-                    <td><textarea name="message"></textarea></td>
+                    <td><textarea id="message" name="message" rows="4"></textarea></td>
                 </tr>
                 <tr>
                     <td></td>

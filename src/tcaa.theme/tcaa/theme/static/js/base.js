@@ -367,6 +367,9 @@ var Controller = new (function(){
             page.load(this.getUrlByPage(page), function(){
                 self.initHashBangLinks();
                 self.initFlowPlayer(page);
+                if (page.find('#contact-form').length > 0){
+                    self.initContactFormManager(page);
+                }
             });
         }
         page.data('loaded', true);
@@ -379,21 +382,62 @@ var Controller = new (function(){
         }
     }
 
+    this.initContactFormManager = function(page) {
+        self.contact_form = page.find('#contact-form form');
+        self.contact_form.submit(function() {
+            var subdata = {
+                name: self.contact_form.find('#name').val(),
+                email: self.contact_form.find('#email').val(),
+                message: self.contact_form.find('#message').val()
+            }; 
+            $.post('/portal/contact/contact_submit',
+                subdata,
+                function(data) { self.handleContactFormResponse(data); },
+                'json'
+            );    
+            return false;
+        });
+    }
+
+    this.handleContactFormResponse = function(data) {
+        var message = '<h2>Contact Us Direct</h2><p>'
+        if (data['errors'].length) {
+            message += 'Sorry, there were errors when sending your message:<ul>';
+            for (var i=0; i<data['errors'].length;i++) {
+                var error = data['errors'][i];
+                if (error.hasOwnProperty('inputerror')){
+                    message+='<li>' + error['inputerror'] + '</li>';
+                }
+                if (error.hasOwnProperty('exception')){
+                    message +='<li>' + error['exception'] + ' Please try again.</li>';
+                }
+            }
+            message += '</ul>';
+        } else {
+            message += 'Thank you. Your message has been sent';
+        }
+        message += '</p>'
+        closebutton = '<a class="close" href="/">Close</a>';
+        var info = '<div class="messagepop pop">' + message + closebutton + '</div>';
+        $('.contactpage').append(info);
+        $('.close').live('click', function() {
+            $('.pop').slideFadeToggle(function(){
+                    $('.messagepop').remove();
+            });
+            return false;
+        });
+        $('.pop').slideFadeToggle();
+    }
+
 });
 
-/*
-// Tried this as $(window).bind('popstate', function(e){ ... }) but my dev
-// browser (chrome 12.0.742 on ubuntu) wasn't having it for some reason.
-// This way is looking slightly more promising, but e.state is still empty.
-window.onpopstate = function(e){
-    console.log('popped state');
-    console.log(e);
-    console.log(e.state);
-    console.log(history.state);
-}
-*/
+$.fn.slideFadeToggle = function(easing, callback) {
+        return this.animate({opacity:'toggle',height:'toggle'}, 'fast', easing, callback);
+    }
 
 $(function(){
     Controller.init(pageData);
 });
+
+
 

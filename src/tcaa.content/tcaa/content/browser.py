@@ -29,6 +29,59 @@ class View(grok.View):
         return super(View, self).__call__()
 
 
+class ContactSubmit(grok.View):
+    """Contact form async handler"""
+    grok.context(ITCAAContentish)
+    grok.require('zope2.View')
+    grok.name('contact_submit')
+
+    def update(self):
+        # validate
+        putils = getToolByName(self, 'plone_utils')
+
+        self.c_name = self.request.form.get('name')
+        self.c_email = self.request.form.get('email')
+        self.c_message = self.request.form.get('message')
+        self.errors = []
+        if not self.c_name:
+            self.errors.append({'inputerror':'name missing'})
+        if not self.c_email or not putils.validateEmailAddresses(self.c_email):
+            self.errors.append({'inputerror':'email missing or invalid'})
+        if not self.c_message:
+            self.errors.append({'inputerror':'message missing'})
+            
+        if self.errors:
+            self.retval = {'errors': self.errors}
+            return
+
+        #process
+        self.sendContactMail()
+        self.retval = {'errors': self.errors}
+
+    def render(self):
+        if self.request.environ.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
+            return json.dumps(self.retval)
+        return "You cannot use this resource directly"
+
+    def sendContactMail(self):
+        portal = getToolByName(self, 'portal_url').getPortalObject()
+        putils = getToolByName(self, 'plone_utils')
+        envelope_from = portal.getProperty('email_from_address')
+        envelope_to = envelope_from 
+        send = portal.getProperty('email_from_name')
+        message = """Contact from %s 
+        email: %s 
+        message:
+        %s""" % (self.c_name, self.c_email, self.c_message)
+        subject = "Contact from TCAAUSA website"
+        try:
+            host = putils.getMailHost()
+            result = host.send(message, mto=envelope_to, mfrom=envelope_from, subject=subject)
+        except Exception as e:
+            self.errors.append({'exception':'There was a problem sending your contact details.'})
+            context.plone_log("ContactSubmit: %s" % e)
+            
+
 class PageData(grok.View):
     """Utility view that builds the page data json object
     
