@@ -216,5 +216,10 @@ class CustomPageStyle(grok.View):
             element_style += "border: 1px solid #%s; " %(bo_color,)
         return element_style
 
-       
+    def content_class(self):
+        context = aq_inner(self.context)
+        element_class = ''
+        if context.whiteText:
+            element_class = "white-text ";
+        return element_class
 

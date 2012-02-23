@@ -9,10 +9,8 @@
 <head>
     <metal:headjs fill-slot="javascript_head_slot">
         <script tal:replace="structure context/@@pagedata"></script>
-
-        <script type="text/javascript" src="http://use.typekit.com/ygy2eqb.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
- 
+        <script type="text/javascript" src="http://use.typekit.com/zze7hxs.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
     </metal:headjs>
 </head>
 <body> 

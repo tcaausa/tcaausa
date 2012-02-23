@@ -55,6 +55,11 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             required=False,
         )
 
+    whiteText = schema.Bool(
+            title=u"White Text",
+            description=u"Check this to make text content white",
+            required=False,
+        )
     pageBackgroundColor = schema.TextLine(
             title=u"Page Background Color",
             description=u"a hex value for the background color the page. Leave blank for default.",
