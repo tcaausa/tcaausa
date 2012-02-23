@@ -13,7 +13,13 @@
 /* General */
 
 h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#808080; }
+h1                                  { font-size:34px; margin-bottom:20px; }
 h2                                  { font-size:24px; margin-bottom:20px; }
+h3                                  { font-size:18px; font-weight:bold; }
+h4                                  { font-size:15px; font-weight:bold; }
+h5                                  { font-size:13px; font-weight:bold; }
+
+
 p                                   { margin-top:18px; }
 a                                   { text-decoration:None; }
 
@@ -50,6 +56,14 @@ a                                   { text-decoration:None; }
 .scroll-page                        { padding:100px 0px; width:875px; height:368px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 
+#content .scroll-page .white-text            { color:#fff; }
+#content .scroll-page .white-text h1,
+#content .scroll-page .white-text h2,
+#content .scroll-page .white-text h3,
+#content .scroll-page .white-text h4,
+#content .scroll-page .white-text h5         { color:#fff; border-color:#fff; }
+
+
 
 /* Content Layout */
 .content-left                       { width:282px; padding:0px; float:left; margin-left:14px; }
@@ -57,6 +71,15 @@ a                                   { text-decoration:None; }
 .content-left-wide                  { width:578px; padding:0px; float:left; }
 .content-right-wide                 { width:578px; padding:0px; float:right; }
 .content-full-width                 { width:974px; padding:0px; }
+
+/* Content Layout dark backgrounds - padded */
+.content-padded                     { padding:0 14px 0 14px; }
+.content-padded .content-left       { width:272px; padding:0px; float:left; margin-left:14px; }
+.content-padded .content-left:first { margin-left:0px; }
+.content-padded .content-left-wide  { width:554px; padding:0px; float:left; }
+.content-padded .content-right-wide { width:554px; padding:0px; float:right; }
+.content-padded .content-full-width { width:846px; padding:0px; }
+
 
 .featured-pages                     { width:875px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:11px; border:1px solid #000; }
