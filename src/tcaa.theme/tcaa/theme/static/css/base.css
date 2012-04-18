@@ -1,13 +1,14 @@
 
-body                                { background:#ffffff; color:#555; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; margin:0; padding:0; }
+body                                { background:#f0f1f2; color:#555; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; margin:0; padding:0; }
 
 
 /* Layout */
 
 #page-wrap                          { width:1024px; margin:0 auto; }
-/*#page-sidebar                       { border-right:1px solid #bbb; width:121px; height:100%; padding:14px; position:fixed; color:#555; } */
-#page-sidebar                       { width:135px; height:100%; padding:14px 14px 0 0; position:fixed; color:#555; }
-#page-content                       { width:875px; margin-left:149px; }
+#page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; background:#fff;
+                                      box-shadow:rgba(0,0,0,0.2) 5px -3px 6px; } 
+/*#page-sidebar                       { width:135px; height:100%; padding:14px 14px 0 0; position:fixed; color:#555; } */
+#page-content                       { width:908px; margin-left:180px; }
 
 #page-logo                          { margin-bottom:35px; }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
@@ -59,7 +60,7 @@ strong                              { font-weight:bold; }
 /* Feature-specific */
 
 .scroll                             { }
-.scroll-sect                        { width:875px; height:608px; margin-bottom:20px; overflow:hidden; }
+.scroll-sect                        { width:874px; height:608px; padding:17px 17px 0 17px; margin-bottom:20px; overflow:hidden; background:#fff; }
 .scroll-sect:before,
 .scroll-sect:after                  { display:table; content:""; zoom:1; }
 .scroll-sect:after                  { clear:both; }
