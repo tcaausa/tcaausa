@@ -13,9 +13,10 @@ body                                { background:#f0f1f2; color:#555; font-famil
 /*#page-sidebar                       { width:135px; height:100%; padding:14px 14px 0 0; position:fixed; color:#555; } */
 #page-content                       { width:908px; margin-left:180px; }
 
-#page-logo                          { margin-bottom:35px; }
+#page-logo                          { margin-bottom:0 }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
 
+#page-menu                          { border-top:2px solid #000; padding-top:10px; }
 #page-menu ul                       { margin-left:0; padding-left:0; list-style-type:none; }
 #page-menu li                       { margin:3px 0; font-size:17px; } 
 #page-menu li a                     { color:#000; text-decoration:none; outline:0;}
@@ -26,15 +27,15 @@ body                                { background:#f0f1f2; color:#555; font-famil
 #page-menu ul.sub li                { margin:13px; font-size:11px; line-height:12px; }
 #page-menu li.active ul.sub         { display:block; }
 
-#page-twitter                       { border-top:1px solid #282971; margin-top:25px; padding-top:25px; }
-#page-twitter h2                    { font-weight:bold; font-size:12px; margin:0; margin-bottom:2px; color:#282971; }
-#page-twitter span                  { font-size:11px; line-height:16px; margin:0; display:block; }
+#page-twitter                       { border-top:2px solid #000; margin-top:20px; padding-top:20px; }
+#page-twitter h2                    { font-size:12px; margin:0; margin-bottom:6px; color:#000; }
+#page-twitter span                  { font-size:12px; line-height:16px; margin:0; display:block; }
 #page-twitter a                     { color:#00aeff; }
 
-#page-channels                      { border-top:1px solid #282971; margin:8px 0; padding-top:10px; }
+#page-channels                      { margin:8px -30px 0 -30px; padding:10px; background:#d1d1d1; }
 #page-channels ul                   { margin:0; padding:0; }
-#page-channels li                   { float:left; margin-right:5px; }
-#page-channels li a                 { display:block; width:17px; height:13px; text-indent:-99999px; outline:0; }
+#page-channels li                   { display:inline-block; margin-left:18px; }
+#page-channels li a                 { display:block; width:25px; height:25px; text-indent:-99999px; outline:0; }
 #page-channels li.channel-email a      { background:url(../img/icons/email.gif) no-repeat; }
 #page-channels li.channel-facebook a   { background:url(../img/icons/facebook.gif) no-repeat; }
 #page-channels li.channel-twitter a    { background:url(../img/icons/twitter.gif) no-repeat; }
