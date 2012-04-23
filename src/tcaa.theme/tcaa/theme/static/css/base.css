@@ -71,14 +71,14 @@ strong                              { font-weight:bold; }
 
 .scroll-sect-content                { height:568px; overflow:hidden; position:relative; }
 
-.scroll-sect-footer                 { margin:0 -17px; padding:10px 17px; height:29px; color:#000; position:relative; font-family:sans-serif; background:#d1d1d1; text-transform:uppercase; }
+.scroll-sect-footer                 { padding: 7px 0px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
 .scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }
 .scroll-sect-footer li a span       { background:#0138c5; display:block; width:20px; height:5px; }
 .scroll-sect-footer li a:hover span { background:#fa1b16; }
 .scroll-sect-footer li a.active span { background:#fa1b16; }
-.scroll-sect-footer::after          { border:25px solid; border-color:transparent transparent #d1d1d1 transparent; content:""; display:block; width:0px; height:50px; position:absolute; top:-100px; left:15px; } 
+.scroll-sect-footer:after           { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; background:url(../img/section_arrow.png) no-repeat; }
 
 .scroll-page                        { padding:100px 17px 0 0; width:875px; height:568px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
