@@ -111,7 +111,7 @@ strong                              { font-weight:bold; }
 
 .featured-pages                     { width:875px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:13px; }
-.featured-title                     { width:250px; height:64px; position:relative; top:-224px; padding:5px 16px 0 16px; background:#ececec; }
+.featured-title                     { width:250px; height:64px; position:relative; top:-229px; padding:5px 16px 0 16px; background:#ececec; }
 .featured-pages img                 {  }
 .featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
 
