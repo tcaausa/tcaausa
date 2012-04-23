@@ -5,12 +5,11 @@ body                                { background:#f0f1f2; color:#000; font-famil
 /* Layout */
 
 #page-wrap                          { width:1024px; margin:0 auto; }
-#page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; background:#fff;
+#page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; background:#fff; z-index:10;
                                       box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
                                       -webkit-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
                                       -moz-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px; }
 
-/*#page-sidebar                       { width:135px; height:100%; padding:14px 14px 0 0; position:fixed; color:#555; } */
 #page-content                       { width:908px; margin-left:180px; }
 
 #page-logo                          { margin-bottom:0 }
@@ -21,7 +20,6 @@ body                                { background:#f0f1f2; color:#000; font-famil
 #page-menu li                       { margin:3px 0; font-size:17px; } 
 #page-menu li a                     { color:#000; text-decoration:none; outline:0;}
 #page-menu li a:hover               { color:#282971; }
-/*#page-menu li.active a              { color:#666; } */
 
 #page-menu ul.sub                   { margin-top:3px; margin-left: 2px; display:none; }
 #page-menu ul.sub li                { margin:13px; font-size:11px; line-height:12px; }
@@ -64,14 +62,14 @@ strong                              { font-weight:bold; }
 /* Feature-specific */
 
 .scroll                             { }
-.scroll-sect                        { width:875px; height:608px; padding:17px 16px 0 17px; margin-bottom:20px; overflow:hidden; background:#fff; }
+.scroll-sect                        { width:908px; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
 .scroll-sect:before,
 .scroll-sect:after                  { display:table; content:""; zoom:1; }
 .scroll-sect:after                  { clear:both; }
 
 .scroll-sect-content                { height:568px; overflow:hidden; position:relative; }
 
-.scroll-sect-footer                 { padding: 7px 0px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
+.scroll-sect-footer                 { padding: 10px 10px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
 .scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }
@@ -80,7 +78,7 @@ strong                              { font-weight:bold; }
 .scroll-sect-footer li a.active span { background:#fa1b16; }
 .scroll-sect-footer:after           { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; background:url(../img/section_arrow.png) no-repeat; }
 
-.scroll-page                        { padding:100px 17px 0 0; width:875px; height:568px; float:left; margin-right:0px; overflow:hidden; }
+.scroll-page                        { width:908px; height:568px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
 
 .scroll-page .white-text            { color:#fff; }

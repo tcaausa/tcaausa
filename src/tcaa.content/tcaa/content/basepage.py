@@ -67,7 +67,7 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
         )
 
     backgroundImage = NamedBlobImage(
-            title=u"Page Background Image (875 x 568)",
+            title=u"Page Background Image (908 x 568)",
             description=u"An image used for the background of this page",
             required=False,
         )
