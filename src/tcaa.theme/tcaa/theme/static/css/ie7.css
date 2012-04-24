@@ -5,3 +5,5 @@
 #page-channels      {height:25px;}
 #page-channels li   { display:inline; float:left; }
 
+.scroll-sect        { position:relative; }
+.scroll-sect-footer LI A { text-transform:capitalize;line-height:0; text-indent:0; }

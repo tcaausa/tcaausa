@@ -306,7 +306,8 @@ var Controller = new (function(){
         var pageIndexB = page.data('page-index');
 
         if (sectIndexA != sectIndexB) {
-            bodyCss = { 'scrollTop': sect.position().top + this.options.pageOffset.top };
+            scrollContainer = sect.parent();
+            bodyCss = { 'scrollTop': (sectIndexB * scrollContainer.outerHeight(true)) + this.options.pageOffset.top };
         }
         if (pageIndexA != pageIndexB) {
             sectCss = { 'left': -page.position().left };
