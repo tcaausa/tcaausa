@@ -34,6 +34,7 @@
 
     <!-- IE conditionals -->
     <stylesheet id="++theme++tcaa.theme/css/ie.css"         expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" conditionalcomment="lt IE 9" />
+    <stylesheet id="++theme++tcaa.theme/css/ie7.css"        expression="request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" conditionalcomment="lt IE 8" />
 
     <!-- admin stylesheets -->
     <stylesheet id="++theme++tcaa.theme/css/admin.css"      expression="not:request/HTTP_X_THEME_ENABLED | nothing" applyPrefix="True" />

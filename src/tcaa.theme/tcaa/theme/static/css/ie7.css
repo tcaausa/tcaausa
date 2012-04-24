@@ -1,0 +1,7 @@
+/*#page-sidebar {left:10px;}*/
+
+.featured-pages {position:relative; top:0px}
+
+#page-channels      {height:25px;}
+#page-channels li   { display:inline; float:left; }
+
