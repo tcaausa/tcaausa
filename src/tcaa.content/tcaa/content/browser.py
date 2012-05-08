@@ -205,15 +205,7 @@ class CustomPageStyle(grok.View):
         return self.style
 
     def content_style(self):
-        context = aq_inner(self.context)
-        bg_color = context.backgroundColor
-        bo_color = context.borderColor
-        element_style = ''
-        if bg_color:
-            element_style += "background-color:#%s; " % (bg_color,)
-        if bo_color:
-            element_style += "border: 1px solid #%s; " %(bo_color,)
-        return element_style
+        return None
 
     def content_class(self):
         context = aq_inner(self.context)
