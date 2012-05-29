@@ -182,13 +182,13 @@ class CustomPageStyle(grok.View):
     def update(self):
         context = aq_inner(self.context)
         scales = getMultiAdapter((context, self.request), name='images')
-        scale = scales.scale('backgroundImage', width=908, height=568)
+        scale = scales.scale('backgroundImage', width=2000, height=568)
 
         if scale is None and context.pageBackgroundColor == '':
             self.style = None
             return
 
-        self.style = "height:533px; padding:35px 17px 0 17px;"
+        self.style = "height:533px; padding:35px 17px 0 220px;"
         bg_img = ''
         bg_color = ''
         if scale:               
@@ -198,7 +198,6 @@ class CustomPageStyle(grok.View):
         self.style = "%s background:%s %s;" % (self.style, bg_img, bg_color)
                
     def render(self):
-        #return self.style
         return self
 
     def page_style(self):

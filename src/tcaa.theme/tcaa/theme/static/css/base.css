@@ -4,13 +4,14 @@ body                                { background:#f0f1f2; color:#000; font-famil
 
 /* Layout */
 
-#page-wrap                          { width:1088px; margin:0 auto; }
+#page-wrap                          { width:100%; margin:0 auto; }
 #page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; background:#fff; z-index:10;
                                       box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
                                       -webkit-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
                                       -moz-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px; }
 
-#page-content                       { width:908px; margin-left:180px; }
+#page-sidebar                       { margin-left: 20px; }
+#page-content                       { width:100%; margin-left:180px; }
 
 #page-logo                          { margin-bottom:0 }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
@@ -62,12 +63,12 @@ strong                              { font-weight:bold; }
 /* Feature-specific */
 
 .scroll                             { }
-.scroll-sect                        { width:908px; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
+.scroll-sect                        { width:100%; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
 .scroll-sect:before,
 .scroll-sect:after                  { display:table; content:""; zoom:1; }
 .scroll-sect:after                  { clear:both; }
 
-.scroll-sect-content                { height:568px; overflow:hidden; position:relative; }
+.scroll-sect-content                { margin-left:0px; height:568px; overflow:hidden; position:relative; }
 
 .scroll-sect-footer                 { padding: 10px 10px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
@@ -76,10 +77,14 @@ strong                              { font-weight:bold; }
 .scroll-sect-footer li a span       { background:#0138c5; display:block; width:20px; height:5px; }
 .scroll-sect-footer li a:hover span { background:#fa1b16; }
 .scroll-sect-footer li a.active span { background:#fa1b16; }
-.scroll-sect-footer:after           { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; background:url(../img/section_arrow.png) no-repeat; }
+.scroll-sect-footer:after           { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:284px; background:url(../img/section_arrow.png) no-repeat; }
 
-.scroll-page                        { width:908px; height:568px; float:left; margin-right:0px; overflow:hidden; }
+/*.scroll-page                        { width:908px; height:568px; float:left; margin-right:0px; overflow:hidden; } */
+.scroll-page                        { width:2000px; height:568px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
+
+/* XXX */
+.scroll-sect-title                  { margin-left: 203px; }
 
 .scroll-page .white-text            { color:#fff; }
 .scroll-page .white-text h1,
