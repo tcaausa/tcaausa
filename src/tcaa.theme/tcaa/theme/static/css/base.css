@@ -8,10 +8,14 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-wrap                          { width:100%; margin:0 auto; }
 #page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:100;
                                       background:rgb(255,255,255);
-                                      background:rgba(255,255,255,0.8);
-                                      box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
-                                      -webkit-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
-                                      -moz-box-shadow:rgba(0,0,0,0.2) 5px -3px 6px; }
+                                      background:         linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                      background:      -o-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                      background:     -ms-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                      background:    -moz-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                              box-shadow:rgba(0,0,0,0.2) 1px 5px 6px;
+                                         -moz-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; 
+                                      -webkit-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; }
 
 #page-sidebar                       { margin-left: 20px; }
 #page-content                       { width:100%; margin-left:180px; }
