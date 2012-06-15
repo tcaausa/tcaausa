@@ -34,6 +34,7 @@ var Controller = new (function(){
 
         for (var i=0; i<this.pageData.length; i++) {
             var sect = sectTemplate.clone();
+            sect.css('z-index', 30-i);
             this.container.append(sect);
 
             sect = sect.find('.scroll-sect-content');

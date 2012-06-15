@@ -6,7 +6,7 @@ body                                { background:#f0f1f2; color:#000; font-famil
 /* Layout */
 
 #page-wrap                          { width:100%; margin:0 auto; }
-#page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:10;
+#page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:100;
                                       background:rgb(255,255,255);
                                       background:rgba(255,255,255,0.8);
                                       box-shadow:rgba(0,0,0,0.2) 5px -3px 6px;
@@ -66,7 +66,10 @@ strong                              { font-weight:bold; }
 /* Feature-specific */
 
 .scroll                             { }
-.scroll-sect                        { width:100%; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
+.scroll-sect                        { width:100%; height:608px; margin-bottom:0px; overflow:hidden; background:#fff; position:relative; 
+                                              box-shadow:rgba(0,0,0,0.5) 0px 5px 10px;
+                                         -moz-box-shadow:rgba(0,0,0,0.5) 0px 5px 10px;
+                                      -webkit-box-shadow:rgba(0,0,0,0.5) 0px 5px 10px;}
 .scroll-sect:before,
 .scroll-sect:after                  { display:table; content:""; zoom:1; }
 .scroll-sect:after                  { clear:both; }
@@ -147,7 +150,7 @@ strong                              { font-weight:bold; }
 /* message popup */
 .messagepop                         { background-color: #fff; color:#808080; border:1px solid #000; 
                                       cursor:default; display:none; margin-top:15px; 
-                                      position:absolute; left:160px; text-align:left; width:394px; z-index:50; 
+                                      position:absolute; left:160px; text-align:left; width:394px; z-index:150; 
                                       padding:25px 25px 20px;
                                       box-shadow:6px 6px 25px #444; 
                                       -moz-box-shadow:6px 6px 25px #444; 
