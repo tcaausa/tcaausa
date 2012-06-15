@@ -1,5 +1,5 @@
 
-body                                { background:#f0f1f2; color:#000; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; 
+body                                { background:#f0f1f2; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:13px; line-height:18px; 
                                       margin:0; padding:0; min-width:1110px; }
 
 
@@ -45,14 +45,14 @@ body                                { background:#f0f1f2; color:#000; font-famil
 
 /* General */
 
-h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#000; line-height:1em; }
-h1                                  { font-size:34px; margin-bottom:20px; }
-h2                                  { font-size:24px; margin-bottom:20px; }
+h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; line-height:1em; }
+h1                                  { font-size:34px; margin-bottom:2px; }
+h2                                  { font-size:24px; margin-bottom:2px; }
 h3                                  { font-size:18px; font-weight:bold; }
 h4                                  { font-size:15px; font-weight:bold; }
 h5                                  { font-size:13px; font-weight:bold; }
 
-p                                   { margin:18px 0 10px 0; }
+/*p                                   { margin:18px 0 10px 0; } */
 a                                   { text-decoration:None; }
 strong                              { font-weight:bold; }
 
@@ -122,7 +122,7 @@ strong                              { font-weight:bold; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:13px; }
 .featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; }
 .featured-pages img                 {  }
-.featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
+.scroll-page .featured-pages a      { color:#333; font-family: 'Droid Serif',serif; }
 
 /*.contactpage                        { background:#666; } */
 .contactpage div.fl                 { width:180px; margin:11px; }
@@ -164,7 +164,11 @@ div.homepage                        { padding-top:35px !important; }
 div.linkspage .featured-pages       { top: 40px; }
 
 /* Typography */
-.scroll-page h2                     { padding-bottom:15px; border-bottom:2px solid #000; }
+.scroll-page h2,
+.scroll-page h3,
+.scroll-page p                      { padding:8px 15px 15px 15px; background:rgba(60,60,60,0.7); }
+.scroll-page h3                     { width:80%; color:#e7ad47; }
+.scroll-page p                      { width:80%; }
 .scroll-page ul li                  { list-style: inside; list-style-type: disc; }
 .scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
 .scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }
@@ -172,3 +176,5 @@ div.linkspage .featured-pages       { top: 40px; }
 .scroll-page .discreet              { color:#666; font-size:85%; font-weight:normal; }
 .scroll-page .visualHighlight       { background:#ffb; padding:2px; }
 .scroll-page table th               { font-weight:bold; }
+
+.scroll-page a                      { color:#e7ad47; }
