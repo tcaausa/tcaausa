@@ -32,6 +32,8 @@ tcaa/theme/static/css/admin.css
 tcaa/theme/static/css/base.css
 tcaa/theme/static/css/fonts-min.css
 tcaa/theme/static/css/ie.css
+tcaa/theme/static/css/ie6.css
+tcaa/theme/static/css/ie7.css
 tcaa/theme/static/css/plonage.css
 tcaa/theme/static/css/reset-min.css
 tcaa/theme/static/css/utility.css
