@@ -8,11 +8,12 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-wrap                          { width:100%; margin:0 auto; }
 #page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:100;
                                       background:rgb(255,255,255);
-                                      background:         linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
-                                      background:      -o-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
-                                      background:     -ms-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
-                                      background:    -moz-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
-                                      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 100%, rgba(255,255,255,1) 100%);
+                                      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F0F0F0FF',EndColorStr='#FFFFFF');
+                                      background:         linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:      -o-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:     -ms-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:    -moz-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
                                               box-shadow:rgba(0,0,0,0.2) 1px 5px 6px;
                                          -moz-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; 
                                       -webkit-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; }
@@ -23,7 +24,7 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-logo                          { margin-bottom:0 }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
 
-#page-menu                          { border-top:2px solid #000; padding-top:10px; }
+#page-menu                          { border-top:1px dotted #d1d1d1; padding-top:10px; }
 #page-menu ul                       { margin-left:0; padding-left:0; list-style-type:none; }
 #page-menu li                       { margin:3px 0; font-size:17px; } 
 #page-menu li a                     { color:#000; text-decoration:none; outline:0;}
@@ -33,18 +34,18 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-menu ul.sub li                { margin:13px; font-size:11px; line-height:12px; }
 #page-menu li.active ul.sub         { display:block; }
 
-#page-twitter                       { border-top:2px solid #000; margin-top:20px; padding-top:20px; }
+#page-twitter                       { border-top:1px dotted #d1d1d1; margin-top:20px; padding-top:20px; }
 #page-twitter h2                    { font-size:12px; margin:0; margin-bottom:6px; color:#000; }
 #page-twitter span                  { font-size:12px; line-height:16px; margin:0; display:block; }
 #page-twitter a                     { color:#00aeff; }
 
-#page-channels                      { margin:8px -30px 0 -30px; padding:8px 10px; background:#d1d1d1; }
+#page-channels                      { margin:8px -30px 0 -30px; padding:8px 10px; background:url(../img/channels_bar.png) no-repeat; }
 #page-channels ul                   { margin:0; padding:0; }
-#page-channels li                   { display:inline-block; margin-left:18px; }
-#page-channels li a                 { display:block; width:25px; height:25px; text-indent:-99999px; outline:0; }
-#page-channels li.channel-email a      { background:url(../img/icons/email.gif) no-repeat; }
-#page-channels li.channel-facebook a   { background:url(../img/icons/facebook.gif) no-repeat; }
-#page-channels li.channel-twitter a    { background:url(../img/icons/twitter.gif) no-repeat; }
+#page-channels li                   { display:inline-block; margin-left:13px; }
+#page-channels li a                 { display:block; width:36px; height:36px; text-indent:-99999px; outline:0; }
+#page-channels li.channel-email a      { background:url(../img/icons/email.png) no-repeat; }
+#page-channels li.channel-facebook a   { background:url(../img/icons/facebook.png) no-repeat; }
+#page-channels li.channel-twitter a    { background:url(../img/icons/twitter.png) no-repeat; }
 
 
 /* General */
