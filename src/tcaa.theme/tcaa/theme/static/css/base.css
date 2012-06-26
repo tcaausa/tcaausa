@@ -9,11 +9,11 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:100;
                                       background:rgb(255,255,255);
                                       filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F0F0F0FF',EndColorStr='#FFFFFF');
-                                      background:         linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:      -o-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:     -ms-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:    -moz-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 10%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:         linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:      -o-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:     -ms-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:    -moz-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background: -webkit-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
                                               box-shadow:rgba(0,0,0,0.2) 1px 5px 6px;
                                          -moz-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; 
                                       -webkit-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; }
@@ -21,7 +21,7 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-sidebar                       { margin-left: 20px; }
 #page-content                       { width:100%; margin-left:180px; }
 
-#page-logo                          { margin-bottom:0 }
+#page-logo                          { margin-bottom:5px; }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
 
 #page-menu                          { border-top:1px dotted #d1d1d1; padding-top:10px; }
@@ -41,7 +41,7 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 
 #page-channels                      { margin:8px -30px 0 -30px; padding:8px 10px; background:url(../img/channels_bar.png) no-repeat; }
 #page-channels ul                   { margin:0; padding:0; }
-#page-channels li                   { display:inline-block; margin-left:13px; }
+#page-channels li                   { display:inline-block; margin-left:12px; margin-bottom:5px; }
 #page-channels li a                 { display:block; width:36px; height:36px; text-indent:-99999px; outline:0; }
 #page-channels li.channel-email a      { background:url(../img/icons/email.png) no-repeat; }
 #page-channels li.channel-facebook a   { background:url(../img/icons/facebook.png) no-repeat; }
