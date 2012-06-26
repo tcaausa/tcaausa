@@ -26,12 +26,6 @@ from tcaa.content.interfaces import ITCAASettings
 class IContactPage(IBasePage):
     """Describes a contact page
     """
-    
-    form.omitted('content')
-    form.omitted('content_layout')
-    form.omitted('borderColor')
-    form.omitted('backgroundColor')
-
 
     locationOne = RichText(
             title=u"Office Location One",
@@ -57,6 +51,17 @@ class IContactPage(IBasePage):
             title=u"Third Column of contacts",
             description=u"Content for the third column of contacts",
         )
+
+    # Deprecated fields:
+    form.omitted('content_layout')
+    form.omitted('borderColor')
+    form.omitted('backgroundColor')
+    form.omitted('locationOne')
+    form.omitted('locationTwo')
+    form.omitted('locationThree')
+    form.omitted('zoneOne')
+    form.omitted('zoneTwo')
+    form.omitted('zoneThree')
 
 class Fragment(grok.View):
     """A view that returns the markup fragment for a contact page.

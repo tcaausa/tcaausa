@@ -6,18 +6,9 @@
     tal:define="custom_style context/@@custom-page-style"
     tal:attributes="style custom_style/page_style">
 
-    <div class="fl">
-        <div class="location"   tal:content="structure context/locationOne/output"/>
-        <div class="zone"       tal:content="structure context/zoneOne/output"/>
-    </div>
-    <div class="fl">
-        <div class="location"   tal:content="structure context/locationTwo/output"/>
-        <div class="zone"       tal:content="structure context/zoneTwo/output" />
-    </div>
-    <div class="fl">
-        <div class="location"   tal:content="structure context/locationThree/output"/>
-        <div class="zone"       tal:content="structure context/zoneThree/output" />
-    </div>
+    <div tal:attributes="style custom_style/content_style; class custom_style/content_class;"
+           tal:content="structure context/content/output" />
+
     <div class="fl social"      tal:define="social_links view/socialLinks">
        <h3>Contact Us Direct</h3>
        <div id="contact-form">
