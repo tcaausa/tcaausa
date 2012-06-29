@@ -21,10 +21,8 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-sidebar                       { margin-left: 20px; }
 #page-content                       { width:100%; margin-left:180px; }
 
-#page-logo                          { margin-bottom:5px; }
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
 
-#page-menu                          { border-top:1px dotted #d1d1d1; padding-top:10px; }
 #page-menu ul                       { margin-left:0; padding-left:0; list-style-type:none; }
 #page-menu li                       { margin:3px 0; font-size:17px; } 
 #page-menu li a                     { color:#000; text-decoration:none; outline:0;}
@@ -34,7 +32,7 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-menu ul.sub li                { margin:13px; font-size:11px; line-height:12px; }
 #page-menu li.active ul.sub         { display:block; }
 
-#page-twitter                       { border-top:1px dotted #d1d1d1; margin-top:20px; padding-top:20px; }
+#page-twitter                       { margin-top:14px; }
 #page-twitter h2                    { font-size:12px; margin:0; margin-bottom:6px; color:#000; }
 #page-twitter span                  { font-size:12px; line-height:16px; margin:0; display:block; }
 #page-twitter a                     { color:#00aeff; }
@@ -189,3 +187,5 @@ div.linkspage .featured-pages       { top: 40px; }
 .scroll-page table th               { font-weight:bold; }
 
 .scroll-page a                      { color:#e7ad47; }
+
+div.bar {background: url(../img/bar.png) no-repeat center; height: 3px; margin-top:10px; margin-bottom:10px;}

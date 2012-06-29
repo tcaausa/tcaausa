@@ -9,6 +9,7 @@
 
     <dd class="portletItem">
         <ul class="top" id="tcaa-navigation">
+            <div class="bar" />
             <tal:sections tal:repeat="section view/tree">
         <li><a tal:attributes="href section/url"
                tal:content="section/title">link</a>
@@ -24,6 +25,7 @@
             </tal:pages>
             </li>
         </tal:sections>
+        <div class="bar" />
         </ul>
         <div id="page-twitter">
             <h2>Twitter</h2>
