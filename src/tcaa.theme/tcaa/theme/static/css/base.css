@@ -50,10 +50,10 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 
 /* General */
 
-h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#fff; line-height:1em; }
+h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Adelle', serif; font-weight:normal; color:#fff; line-height:1em; }
 h1                                  { font-size:34px; margin-bottom:2px; }
-h2                                  { font-size:24px; margin-bottom:2px; }
-h3                                  { font-size:18px; font-weight:bold; }
+h2                                  { font-size:24px; font-weight:700; margin-bottom:2px; text-transform: uppercase; }
+h3                                  { font-size:18px; font-weight:600; }
 h4                                  { font-size:15px; font-weight:bold; }
 h5                                  { font-size:13px; font-weight:bold; }
 
@@ -128,7 +128,7 @@ strong                              { font-weight:bold; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:13px; }
 .featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; }
 .featured-pages img                 {  }
-.scroll-page .featured-pages a      { color:#333; font-family: 'Droid Serif',serif; }
+.scroll-page .featured-pages a      { color:#333; font-family: 'Adelle',serif; }
 
 /*.contactpage                        { background:#666; } */
 .contactpage div.fl                 { width:180px; margin:65px 11px 11px 100px; }
