@@ -9,11 +9,11 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-sidebar                       { width:120px; padding:5px 30px 0 30px; position:fixed; color:#555; z-index:100;
                                       background:rgb(255,255,255);
                                       filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#F0F0F0FF',EndColorStr='#FFFFFF');
-                                      background:         linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:      -o-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:     -ms-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background:    -moz-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
-                                      background: -webkit-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(255,255,255,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:         linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(240,240,240,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:      -o-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(240,240,240,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:     -ms-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(240,240,240,1) 94%, rgba(255,255,255,0) 100%);
+                                      background:    -moz-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(240,240,240,1) 94%, rgba(255,255,255,0) 100%);
+                                      background: -webkit-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(240,240,240,1) 5%, rgba(240,240,240,1) 94%, rgba(255,255,255,0) 100%);
                                               box-shadow:rgba(0,0,0,0.2) 1px 5px 6px;
                                          -moz-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; 
                                       -webkit-box-shadow:rgba(0,0,0,0.2) 1px 5px 6px; }
@@ -39,13 +39,13 @@ body                                { background:#f0f1f2; color:#fff; font-famil
 #page-twitter span                  { font-size:12px; line-height:16px; margin:0; display:block; }
 #page-twitter a                     { color:#00aeff; }
 
-#page-channels                      { margin:8px -30px 0 -30px; padding:8px 10px; background:url(../img/channels_bar.png) no-repeat; }
-#page-channels ul                   { margin:0; padding:0; }
-#page-channels li                   { display:inline-block; margin-left:12px; margin-bottom:5px; }
+#page-channels                      { height:57px; margin:8px -30px 0 -30px; background:url(../img/channels_bar.png) no-repeat; }
+#page-channels ul                   { margin:0; }
+#page-channels li                   { display:inline-block; margin-top:8px }
 #page-channels li a                 { display:block; width:36px; height:36px; text-indent:-99999px; outline:0; }
-#page-channels li.channel-email a      { background:url(../img/icons/email.png) no-repeat; }
-#page-channels li.channel-facebook a   { background:url(../img/icons/facebook.png) no-repeat; }
-#page-channels li.channel-twitter a    { background:url(../img/icons/twitter.png) no-repeat; }
+#page-channels li.channel-email a      { background:url(../img/icons/email.png) no-repeat; margin-left:18px; }
+#page-channels li.channel-twitter a    { background:url(../img/icons/twitter.png) no-repeat; margin-left:14px; }
+#page-channels li.channel-linkedin a   { background:url(../img/icons/linkedin.png) no-repeat; margin-left:14px;}
 
 
 /* General */

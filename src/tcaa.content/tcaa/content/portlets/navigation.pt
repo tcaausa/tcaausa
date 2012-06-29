@@ -35,7 +35,7 @@
             <ul>
                 <li class="channel-email"><a tal:attributes="href view/email">Email</a></li>
                 <li class="channel-twitter"><a tal:attributes="href view/twitter">Twitter</a></li>
-                <li class="channel-facebook"><a tal:attributes="href view/facebook">Facebook</a></li>
+                <li class="channel-linkedin"><a tal:attributes="href view/linkedin">LinkedIn</a></li>
             </ul>
         </div>
     </dd>

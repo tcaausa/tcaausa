@@ -89,21 +89,28 @@ class Renderer(base.Renderer):
         settings = self._get_tcaa_settings()
         if settings == None:
             return '#'
-        return 'mailto:%s' % settings.email_account
+        return 'mailto:%s' % (settings.email_account or '')
     
     @memoize
     def facebook(self):
         settings = self._get_tcaa_settings()
         if settings == None:
             return '#'
-        return 'http://www.facebook.com/%s' % settings.facebook_account
+        return 'http://www.facebook.com/%s' % (settings.facebook_account or '')
+
+    @memoize
+    def linkedin(self):
+        settings = self._get_tcaa_settings()
+        if settings == None:
+            return '#'
+        return 'http://www.linkedin.com/%s' % (settings.linkedin_account or '')
 
     @memoize
     def twitter(self):
         settings = self._get_tcaa_settings()
         if settings == None:
             return '#'
-        return 'http://twitter.com/#!/%s' % settings.twitter_account
+        return 'http://twitter.com/#!/%s' % (settings.twitter_account or '')
 
     @memoize
     def _data(self):

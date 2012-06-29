@@ -80,8 +80,9 @@ class Fragment(grok.View):
             return []
         settings = registry.forInterface(ITCAASettings, check=False)
         social_links = []
-        for setting in settings.social_links:
-            title, url = setting.split('|')
-            social_links.append({'title':title, 'url':url})
+        if settings.social_links:
+            for setting in settings.social_links:
+                title, url = setting.split('|')
+                social_links.append({'title':title, 'url':url})
         return social_links
 
