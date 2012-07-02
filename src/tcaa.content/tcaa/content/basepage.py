@@ -36,6 +36,7 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
     content = RichText(
             title=u"Content",
             description=u"Rich text for page",
+            required=False,
         )
 
     content_layout = schema.Choice(
