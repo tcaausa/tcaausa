@@ -180,16 +180,18 @@ div.linkspage .featured-pages       { top: 40px; }
 /* Typography */
 .scroll-page h2,
 .scroll-page h3,
-.scroll-page p                      { padding:8px 15px 15px 15px; 
+.scroll-page p,
+.scroll-page ul                      { padding:8px 15px 15px 15px; 
                                       background: rgba(60, 60, 60, 0.7);
                                       filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B23C3C3C', endColorstr='#B23C3C3C'); /* IE 7/8 as rgba not supported */
                                       zoom: 1; /* IE 7/8 rgba not supported */
                                     }
 
 .scroll-page h3                     { width:80%; color:#e7ad47; }
-.scroll-page p                      { width:80%; }
-.scroll-page ul li                  { list-style: inside; list-style-type: disc; }
-.scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
+.scroll-page p,
+.scroll-page ul                     { width:80%; }
+.scroll-page ul li                  { list-style: outside; list-style-type: square; margin-left: 18px; }
+.scroll-page ol li                  { list-style: outside; list-style-type: decimal; margin-left: 18px; }
 .scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }
 .scroll-page .callout               { background:#eee; border-left:1em solid #ccc; clear:both; padding:1em; }
 .scroll-page .discreet              { color:#666; font-size:85%; font-weight:normal; }

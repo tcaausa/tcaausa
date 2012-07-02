@@ -11,17 +11,19 @@
 
 
 /* General */
+.scroll-page                         { background:#f0f1f2; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:18px; margin:0; padding:0; min-width:1500px; }
+.scroll-page h1, h2, h3, h4, h5, h6  { margin-top:0; font-family:'Adelle', serif; font-weight:normal; color:#fff; line-height:1em; }
+.scroll-page h1                      { font-size:34px; margin-bottom:2px; }
+.scroll-page h2                      { font-size:26px; font-weight:700; margin-bottom:2px; text-transform: uppercase; }
+.scroll-page h3                      { font-size:19px; font-weight:600; }
+.scroll-page h4                      { font-size:15px; font-weight:bold; }
+.scroll-page h5                      { font-size:13px; font-weight:bold; }
 
-h1, h2, h3, h4, h5, h6              { margin-top:0; font-family:'Droid Serif', serif; font-weight:normal; color:#808080; line-height:1em; }
-h1                                  { font-size:34px; margin-bottom:20px; }
-h2                                  { font-size:24px; margin-bottom:20px; }
-h3                                  { font-size:18px; font-weight:bold; }
-h4                                  { font-size:15px; font-weight:bold; }
-h5                                  { font-size:13px; font-weight:bold; }
 
 
-p                                   { margin-top:18px; }
+/*p                                   { margin-top:18px; }*/
 a                                   { text-decoration:None; }
+strong                              { font-weight:bold; }
 
 .fl                                 { float:left; }
 .fr                                 { float:right; }
@@ -32,29 +34,29 @@ a                                   { text-decoration:None; }
 /* Feature-specific */
 
 .scroll                             { }
-.scroll-sect                        { width:908px; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
+.scroll-sect                        { width:1200px; height:608px; margin-bottom:20px; overflow:hidden; background:#fff; }
 .scroll-sect:before,
 .scroll-sect:after                  { display:table; content:""; zoom:1; }
 .scroll-sect:after                  { clear:both; }
 
-.scroll-sect-content                { width:908px; height:568px; overflow:hidden; position:relative; }
+.scroll-sect-content                { margin-left:0px; width:1200px; height:568px; overflow:hidden; position:relative; }
 
-
-.scroll-sect-footer                 { width:908px; padding:7px 0px; height:18px; color:#000; position:relative; font-family:sans-serif; 
-                                      border-top: 1px solid #000; text-transform:uppercase; }
-.scroll-sect-footer ul              { margin:0; padding:0; margin-top:2px; }
-.scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:5px; }
+.scroll-sect-footer                 { width:1200px; padding: 10px 10px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
+.scroll-sect-footer ul              { margin:0; padding:0; margin-top:-1px; }
+.scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:7px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }
-.scroll-sect-footer li a span       { background:#aa1100; display:block; width:20px; height:5px; }
-.scroll-sect-footer li a:hover span { background:#ff5500; }
-.scroll-sect-footer li a.active span { background:#ff3300; }
+.scroll-sect-footer li a span        { display:block; width:12px; height:12px; background:url(../img/page_not_selected.png) no-repeat; }
+.scroll-sect-footer li a:hover span  { display:block; width:12px; height:12px; background:url(../img/page_selected.png) no-repeat; }
+.scroll-sect-footer li a.active span { display:block; width:12px; height:12px; background:url(../img/page_selected.png) no-repeat; }
 
-.scroll-sect-footer::after          { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:80px; }
-.scroll-sect-footer::after          { background:url(../img/section_arrow.png) no-repeat;}
+.scroll-sect-footer:after           { content:""; display:block; width:50px; height:50px; position:absolute; top:-50px; left:284px; background:url(../img/section_arrow.png) no-repeat; }
 
 
-.scroll-page                        { width:908px; height:568px; float:left; margin-right:0px; overflow:hidden; }
+.scroll-page                        { width:1200px; height:568px; float:left; margin-right:0px; overflow:hidden; }
 .scroll-page-inner                  { margin:-100px -80px; padding:100px 80px; width:415px; height:368px; padding-right:380px; }
+
+/* XXX */
+.scroll-sect-title                  { margin-left: 297px; }
 
 #content .scroll-page .white-text            { color:#fff; }
 #content .scroll-page .white-text h1,
@@ -70,25 +72,27 @@ a                                   { text-decoration:None; }
 .content-left:first                 { margin-left:0px; }
 .content-left-wide                  { width:578px; padding:0px; float:left; }
 .content-right-wide                 { width:578px; padding:0px; float:right; }
-.content-full-width                 { width:974px; padding:0px; }
+.content-full-width                 { width:874px; padding:0px; }
 
 /* Content Layout dark backgrounds - padded */
 .content-padded                     { padding:0 14px 0 14px; }
 .content-padded .content-left       { width:272px; padding:0px; float:left; margin-left:14px; }
 .content-padded .content-left:first { margin-left:0px; }
-.content-padded .content-left-wide  { width:554px; padding:0px; float:left; }
-.content-padded .content-right-wide { width:554px; padding:0px; float:right; }
+.content-padded .content-left-wide  { width:578px; padding:0px; float:left; }
+.content-padded .content-right-wide { width:578px; padding:0px; float:right; }
 .content-padded .content-full-width { width:846px; padding:0px; }
 
 
-.featured-pages                     { width:875px; position:absolute; top:284px; }
-.featured-pages div.fl              { width:282px; height:224px; margin-bottom:9px; margin-left:13px; }
-.featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; }
-.featured-pages img                 {  }
-.featured-pages a                   { color:#333; font-family: 'Droid Serif',serif; }
+.featured-pages                     { width:910px; position:absolute; top:284px; }
+.featured-pages div.fl              { width:282px; height:224px; margin-bottom:30px; margin-left:25px; }
+.featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; display: table-cell; vertical-align: middle; }
+
+.featured-pages img                 { zoom: 1; filter: alpha(opacity=70); opacity: 0.7; }
+
+.featured-pages a                   { color:#333; font-family: 'Adelle',serif; }
 
 .contactpage                        { background:#666; }
-.contactpage div.fl                 { width:180px; margin:11px; color:#eee; }
+.contactpage div.fl                 { width:180px; margin:65px 11px 11px 100px; }
 .contactpage div.fl.social          { width:239px; margin-right:8px; }
 .contactpage .location              { margin-bottom: 50px; }
 .contactpage div.fl p               { margin: 0 0 0 0; }
@@ -96,30 +100,45 @@ a                                   { text-decoration:None; }
 .contactpage table                  { width:100%; }
 .contactpage table.invisible td,
 .contactpage table.invisible th     { padding:0 10px 0 0; }
+
 .contactpage .social h3             { margin-top:3px; }
 .contactpage #contact-form          { margin-bottom:30px; }
 .contactpage input,
-.contactpage textarea               { width:100%; }
-.contactpage h2,
+.contactpage textarea               { width:95%; margin:2px; resize:none; border:2px solid #000;}
+/*.contactpage h2,
 .contactpage h3                     { color:#ccc; }
-.scroll-page .contactpage h2        { border-bottom:1px solid #000; }
+.scroll-page .contactpage h2        { border-bottom:1px solid #000; }*/
 .contactpage label                  { color:#000; }
 
+.contactpage .social h3             { width:90%; }
+.contactpage .social p              { width:90%; }
+.social h3                          { margin-bottom:9px; }
+.social a                           { color:#000; font-weight:bold; }
+.social a:hover                     { color:#00008F; }
+.social a:active                    { color:#00aeff; }
 
 /* Typography */
-#content                            { line-height:17px; }
-#content .scroll-page h2            { padding-bottom:15px; border-bottom:1px solid #808080; }
-#content .scroll-page ul, 
-#content .scroll-page ol            { margin-left: 0; }
-#content pre                        { padding: 0; background:None; color:#555; }
-#content .scroll-page .pullquote    { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; letter-spacing:0 !important;}
-#content .scroll-page .visualHighlight  { padding:2px; }
-.scroll-page ul li                  { list-style: inside; list-style-type: disc; }
-.scroll-page ol li                  { list-style: inside; list-style-type: decimal; }
-#content .featured-pages a:link     { color:#000 !important;}
-#content .featured-pages a:hover    { color:#000 !important;}
-#content .featured-pages a:visited  { color:#000 !important;}
-#content .featured-pages a:active   { color:#000; }
+.scroll-page h2,
+.scroll-page h3,
+.scroll-page p,
+.scroll-page ul                      { padding:8px 15px 15px 15px; 
+                                      background: rgba(60, 60, 60, 0.7);
+                                      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B23C3C3C', endColorstr='#B23C3C3C'); /* IE 7/8 as rgba not supported */
+                                      zoom: 1; /* IE 7/8 rgba not supported */
+                                    }
+
+.scroll-page h3                     { width:80%; color:#e7ad47; }
+.scroll-page p,
+.scroll-page ul                     { width:80%; }
+.scroll-page ul li                  { list-style: outside; list-style-type: square; margin-left: 18px; }
+.scroll-page ol li                  { list-style: outside; list-style-type: decimal; margin-left: 18px; }
+.scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }
+.scroll-page .callout               { background:#eee; border-left:1em solid #ccc; clear:both; padding:1em; }
+.scroll-page .discreet              { color:#666; font-size:85%; font-weight:normal; }
+.scroll-page .visualHighlight       { color:#e7ad47; }
+.scroll-page table th               { font-weight:bold; }
+
+.scroll-page a                      { color:#e7ad47; }
 
 /* Page Layout exceptions */
 div.homepage                        { padding-top:35px !important; }
@@ -127,11 +146,16 @@ div.linkspage .featured-pages       { top: 40px; }
 
 /* Admin specific */
 .portletTCAANavigation              { display:none; }
-#content h1,
-#content h2                         { letter-spacing: 0; line-height: 18px; }
-#content p                          { margin-bottom: 10px; }
-#content ul                         { list-style-type:none; }
+
+#content .scroll-page p             { margin-bottom: 0; }
 #content .scroll-sect-footer a:link { border-bottom: none; }
+
+#content .scroll-page a:link        { border-bottom: none; }
+#content .scroll-page a,
+#content .scroll-page a:active,
+#content .scroll-page a:hover,
+#content .scroll-page a:visited     { color:#e7ad47; }
+#content ul                         { margin-left:0; }
 
 /* tinymce */
 .mceContentBody h1,
@@ -142,4 +166,5 @@ div.linkspage .featured-pages       { top: 40px; }
 .mceContentBody h6                  { color: #000; }
 
 .mceContentBody h2                  { border-bottom:1px solid #000; }
+
 
