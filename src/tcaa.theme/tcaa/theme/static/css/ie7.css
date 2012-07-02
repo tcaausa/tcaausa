@@ -1,6 +1,6 @@
 /*#page-sidebar {left:10px;}*/
 
-.featured-pages {position:relative; top:0px}
+#page-content { margin-left:0; }
 
 #page-channels li   { display:inline; float:left; }
 #page-channels li.channel-twitter a   { margin-left:18px;}
