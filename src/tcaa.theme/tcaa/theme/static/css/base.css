@@ -193,7 +193,7 @@ div.linkspage .featured-pages       { top: 40px; }
 .scroll-page .pullquote             { width:35%; margin:0 0 0.5em 1em; float:right; clear:right; font-weight:bold; font-size:125%; }
 .scroll-page .callout               { background:#eee; border-left:1em solid #ccc; clear:both; padding:1em; }
 .scroll-page .discreet              { color:#666; font-size:85%; font-weight:normal; }
-.scroll-page .visualHighlight       { background:#ffb; padding:2px; }
+.scroll-page .visualHighlight       { color:#e7ad47; }
 .scroll-page table th               { font-weight:bold; }
 
 .scroll-page a                      { color:#e7ad47; }
