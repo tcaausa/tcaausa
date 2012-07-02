@@ -2,8 +2,9 @@
 
 .featured-pages {position:relative; top:0px}
 
-#page-channels      {height:25px;}
 #page-channels li   { display:inline; float:left; }
+#page-channels li.channel-twitter a   { margin-left:18px;}
+#page-channels li.channel-linkedin a   { margin-left:18px;}
 
 .scroll-sect        { position:relative; }
 .scroll-sect-footer LI A { text-transform:capitalize;line-height:0; text-indent:0; }
