@@ -9,16 +9,20 @@
 #page-logo a                        { display:block; width:122px; height:75px; background:url(../img/logo.gif) no-repeat; text-indent:-99999px; }
 */
 
-
 /* General */
 .scroll-page                         { background:#f0f1f2; color:#fff; font-family:Helvetica, Arial, sans-serif; font-size:14px; line-height:18px; margin:0; padding:0; min-width:1500px; }
-.scroll-page h1, h2, h3, h4, h5, h6  { margin-top:0; font-family:'Adelle', serif; font-weight:normal; color:#fff; line-height:1em; }
+.scroll-page h1,
+.scroll-page h2,
+.scroll-page h3,
+.scroll-page h4,
+.scroll-page h5,
+.scroll-page h6                      { margin-top:0; font-family:'Adelle', serif; font-weight:normal; color:#fff; line-height:1em; }
+
 .scroll-page h1                      { font-size:34px; margin-bottom:2px; }
 .scroll-page h2                      { font-size:26px; font-weight:700; margin-bottom:2px; text-transform: uppercase; }
 .scroll-page h3                      { font-size:19px; font-weight:600; }
 .scroll-page h4                      { font-size:15px; font-weight:bold; }
 .scroll-page h5                      { font-size:13px; font-weight:bold; }
-
 
 
 /*p                                   { margin-top:18px; }*/
@@ -83,6 +87,10 @@ strong                              { font-weight:bold; }
 .content-padded .content-right-wide { width:578px; padding:0px; float:right; }
 .content-padded .content-full-width { width:846px; padding:0px; }
 
+.scroll-page .content-left,
+.scroll-page .content-left-wide,
+.scroll-page .content-right-wide,
+.scroll-page .content-full-width { background:none; }
 
 .featured-pages                     { width:910px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:30px; margin-left:25px; }
@@ -163,6 +171,7 @@ div.linkspage .featured-pages       { top: 40px; }
 #content .scroll-page a:hover,
 #content .scroll-page a:visited     { color:#e7ad47; }
 #content ul                         { margin-left:0; }
+#content .visualHighlight           { color:#e7ad47; background:none; }
 
 /* tinymce */
 .mceContentBody h1,
@@ -170,8 +179,26 @@ div.linkspage .featured-pages       { top: 40px; }
 .mceContentBody h3,
 .mceContentBody h4,
 .mceContentBody h5,
-.mceContentBody h6                  { color: #000; }
+.mceContentBody h6                  { color: #000; margin-top:0; font-family:'Adelle', serif; font-weight:normal; line-height:1em; background:#f5f5f5; }
 
-.mceContentBody h2                  { border-bottom:1px solid #000; }
+.mceContentBody h1                  { font-size:34px; margin-bottom:2px; }
+.mceContentBody h2                  { font-size:26px; font-weight:700; margin-bottom:2px; text-transform: uppercase; }
+.mceContentBody h3                  { font-size:19px; font-weight:600; }
+.mceContentBody h4                  { font-size:15px; font-weight:bold; }
+.mceContentBody h5                  { font-size:13px; font-weight:bold; }
 
+.mceContentBody p,
+.mceContentBody ul                  { background:#f5f5f5; margin-bottom:0px; }
 
+.mceContentBody ul li               { list-style: outside; list-style-type: square; margin-left: 18px; }
+.mceContentBody ol li               { list-style: outside; list-style-type: decimal; margin-left: 18px; }
+
+.mceContentBody .content-left,
+.mceContentBody .content-left-wide,
+.mceContentBody .content-right-wide,
+.mceContentBody .content-full-width { background:none; }
+
+.content-left,
+.content-left-wide,
+.content-right-wide,
+.content-full-width { background:#eee; }
