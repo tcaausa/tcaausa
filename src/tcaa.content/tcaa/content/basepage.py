@@ -77,6 +77,12 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
             description=u"An image used on other pages when linking to this page",
             required=False,
         )
+    textBackground = schema.Bool(
+            title=u"Text background",
+            description=u"Check this to show the grey background on body text and headlines",
+            required=False,
+            default=True,
+        )
 
 
     form.fieldset('seo',
@@ -103,5 +109,6 @@ class IBasePage(form.Schema, IImageScaleTraversable, ITCAAContentish):
     form.omitted('content_layout')
     form.omitted('borderColor')
     form.omitted('backgroundColor')
+    form.omitted('whiteText')
 
 

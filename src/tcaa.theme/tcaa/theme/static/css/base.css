@@ -96,12 +96,15 @@ strong                              { font-weight:bold; }
 /* XXX */
 .scroll-sect-title                  { margin-left: 297px; }
 
+/* White text selection has been depreciated */
+/*
 .scroll-page .white-text            { color:#fff; }
 .scroll-page .white-text h1,
 .scroll-page .white-text h2,
 .scroll-page .white-text h3,
 .scroll-page .white-text h4,
 .scroll-page .white-text h5         { color:#fff; border-color:#fff; }
+*/
 
 /* Content Layout light backgrounds - full width */
 
@@ -181,8 +184,14 @@ div.linkspage .featured-pages       { top: 40px; }
 .scroll-page h2,
 .scroll-page h3,
 .scroll-page p,
-.scroll-page ul                      { padding:8px 15px 15px 15px; 
-                                      background: rgba(60, 60, 60, 0.7);
+.scroll-page ul                     { padding:8px 15px 15px 15px; 
+                                      background: none;
+                                    }
+
+.scroll-page .text-background h2,
+.scroll-page .text-background h3,
+.scroll-page .text-background p,
+.scroll-page .text-background ul    { background: rgba(60, 60, 60, 0.7);
                                       filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B23C3C3C', endColorstr='#B23C3C3C'); /* IE 7/8 as rgba not supported */
                                       zoom: 1; /* IE 7/8 rgba not supported */
                                     }

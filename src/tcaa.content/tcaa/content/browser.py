@@ -209,7 +209,12 @@ class CustomPageStyle(grok.View):
     def content_class(self):
         context = aq_inner(self.context)
         element_class = ''
-        if context.whiteText:
-            element_class = "white-text ";
+
+        # Depreciated as the css always sets the text to white
+        #if context.whiteText:
+        #    element_class += "white-text ";
+
+        if context.textBackground:
+            element_class += "text-background ";
         return element_class
 

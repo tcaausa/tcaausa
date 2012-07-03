@@ -56,6 +56,7 @@ class IContactPage(IBasePage):
     form.omitted('content_layout')
     form.omitted('borderColor')
     form.omitted('backgroundColor')
+    form.omitted('whiteText')
     form.omitted('locationOne')
     form.omitted('locationTwo')
     form.omitted('locationThree')
