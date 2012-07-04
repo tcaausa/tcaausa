@@ -79,7 +79,9 @@ strong                              { font-weight:bold; }
 
 .scroll-sect-content                { margin-left:0px; height:568px; overflow:hidden; position:relative; }
 
-.scroll-sect-footer                 { padding: 10px 10px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
+.scroll-sect-footer                 { padding: 10px 10px; height:18px; color:#333; position:relative; border-top:1px solid #000; text-transform:uppercase;
+                                      font-family:Helvetica, Arial, sans-serif; font-size:18px; font-weight: bold; font-stretch: condensed;
+                                    }
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:-1px; }
 .scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:7px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }

@@ -45,7 +45,10 @@ strong                              { font-weight:bold; }
 
 .scroll-sect-content                { margin-left:0px; width:1200px; height:568px; overflow:hidden; position:relative; }
 
-.scroll-sect-footer                 { width:1200px; padding: 10px 10px; height:18px; color:#000; position:relative; font-family:sans-serif; border-top:1px solid #000; text-transform:uppercase; }
+.scroll-sect-footer                 { width:1200px; padding: 10px 10px; height:18px; color:#333; position:relative; border-top:1px solid #000; text-transform:uppercase;
+                                      font-family:Helvetica, Arial, sans-serif; font-size:18px; font-weight: bold; font-stretch: condensed;
+                                    }
+
 .scroll-sect-footer ul              { margin:0; padding:0; margin-top:-1px; }
 .scroll-sect-footer li              { margin:0; padding:0; display:block; float:left; margin-left:7px; }
 .scroll-sect-footer li a            { color:#fff; text-decoration:none; text-indent:-99999px; display:block; padding:5px 0; outline:0; /* Padding provides a larger click target. */ }
@@ -94,9 +97,10 @@ strong                              { font-weight:bold; }
 
 .featured-pages                     { width:910px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:30px; margin-left:25px; }
-.featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; display: table-cell; vertical-align: middle; }
-
-.featured-pages img                 { zoom: 1; filter: alpha(opacity=70); opacity: 0.7; }
+.featured-title                     { width:250px; height:50px; position:relative; top:-224px; padding:14px 16px 0 16px; 
+                                      background: rgba(236, 236, 236, 0.8);
+                                      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ccececec',EndColorStr='#ccececec');
+                                    }
 
 .featured-pages a                   { color:#333; font-family: 'Adelle',serif; }
 
@@ -172,6 +176,7 @@ div.linkspage .featured-pages       { top: 40px; }
 #content .scroll-page a:visited     { color:#e7ad47; }
 #content ul                         { margin-left:0; }
 #content .visualHighlight           { color:#e7ad47; background:none; }
+#content .featured-pages a          { color:#333; font-family: 'Adelle',serif; }
 
 /* tinymce */
 .mceContentBody h1,
