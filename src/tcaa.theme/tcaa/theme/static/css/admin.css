@@ -177,6 +177,7 @@ div.linkspage .featured-pages       { top: 40px; }
 #content ul                         { margin-left:0; }
 #content .visualHighlight           { color:#e7ad47; background:none; }
 #content .featured-pages a          { color:#333; font-family: 'Adelle',serif; }
+#content .scroll-page li            {  line-height:1em; }
 
 /* tinymce */
 .mceContentBody h1,
