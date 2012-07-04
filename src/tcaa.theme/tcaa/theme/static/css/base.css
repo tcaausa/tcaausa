@@ -127,9 +127,10 @@ strong                              { font-weight:bold; }
 
 .featured-pages                     { width:910px; position:absolute; top:284px; }
 .featured-pages div.fl              { width:282px; height:224px; margin-bottom:30px; margin-left:25px; }
-.featured-title                     { width:250px; height:64px; position:relative; top:-230px; padding:5px 16px 0 16px; background:#ececec; display: table-cell; vertical-align: middle; }
-
-.featured-pages img                 { zoom: 1; filter: alpha(opacity=70); opacity: 0.7; }
+.featured-title                     { width:250px; height:50px; position:relative; top:-224px; padding:14px 16px 0 16px; 
+                                      background: rgba(236, 236, 236, 0.8);
+                                      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ccececec',EndColorStr='#ccececec');
+                                    }
 
 .scroll-page .featured-pages a      { color:#333; font-family: 'Adelle',serif; }
 
