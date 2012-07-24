@@ -73,5 +73,6 @@
         <replace css:content-children="#content-core"
                  css:theme-children=".scroll-sect" />
 
+        <append css:theme="body" css:content="#visual-portal-wrapper .row script" />
     </rules>
 </rules>
