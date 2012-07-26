@@ -291,7 +291,7 @@ var Controller = new (function(){
             // the main page scroll viewport
             var _gaq = _gaq || [];
             if (_gaq) {
-                _gaq.push(['_trackPageView', url]);
+                _gaq.push(['_trackPageview', url]);
             }
         }
     }
