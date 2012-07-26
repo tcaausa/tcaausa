@@ -286,6 +286,12 @@ var Controller = new (function(){
         if (page) {
             var sect = this.getSectByPage(page);
             this.gotoPage(sect, page, initial);
+
+            // Google analytics page tracking within
+            // the main page scroll viewport
+            if (_gaq) {
+                _gaq.push(['_trackPageView', url]);
+            }
         }
     }
 
