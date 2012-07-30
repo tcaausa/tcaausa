@@ -289,9 +289,9 @@ var Controller = new (function(){
 
             // Google analytics page tracking within
             // the main page scroll viewport
-            var _gaq = _gaq || [];
-            if (_gaq) {
-                _gaq.push(['_trackPageview', url]);
+            if (typeof(_gat) != "undefined") {
+                tracker = _gat._getTrackerByName();
+                tracker._trackPageview(url);
             }
         }
     }
