@@ -37,6 +37,7 @@ tcaa/theme/static/css/ie7.css
 tcaa/theme/static/css/plonage.css
 tcaa/theme/static/css/reset-min.css
 tcaa/theme/static/css/utility.css
+tcaa/theme/static/img/bar.png
 tcaa/theme/static/img/bg.gif
 tcaa/theme/static/img/channels_bar.png
 tcaa/theme/static/img/contenttypes-sprite.png
@@ -51,6 +52,7 @@ tcaa/theme/static/img/icons/email.gif
 tcaa/theme/static/img/icons/email.png
 tcaa/theme/static/img/icons/facebook.gif
 tcaa/theme/static/img/icons/facebook.png
+tcaa/theme/static/img/icons/linkedin.png
 tcaa/theme/static/img/icons/twitter.gif
 tcaa/theme/static/img/icons/twitter.png
 tcaa/theme/static/js/base.js
