@@ -1,7 +1,0 @@
-setuptools
-Plone
-tcaa.theme
-tcaa.content
-
-[test]
-plone.app.testing
