@@ -11,15 +11,11 @@ Check the buildout out from source control::
 
   $ svn co https://svn.isotoma.com/svn/tcaausa/tcaa/trunk tcaa-buildout
 
-Choose which buildout you want to run by uncommenting the appropriate line in
-buildout.cfg::
+Choose which buildout you want to run by soft-linking the appropriate
+configuration file, development.cfg or production.cfg, as buildout.cfg::
 
   $ cd tcaa-buildout
-  $ vi buildout.cfg
-  [buildout]
-  extends =
-  #     production.cfg
-      development.cfg
+  $ ln -s development.cfg buildout.cfg
 
 Bootstrap the buildout.  This should only need to be when the
 buildout is first setup or when it is moved::
