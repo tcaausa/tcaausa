@@ -30,6 +30,25 @@ Running the development buildout will update packages from version
 control.  This may require manual input of a username and password for
 Isotoma's Subversion service.
 
+Setting up Production for AWS Deployment
+----------------------------------------
+
+Because there are add-on packages in this buildout that are not released, it
+is important to pull the correct tags of those packages for AWS deployment.  
+This can be accomlished using mr.developer.  However, the production release 
+should not use mr.developer as that would make production deployment dependent 
+on the availability of the svn repository that is home to those packages.
+
+To solve this problem, this buildout provides a `predeployment.cfg` file. When
+preparing for an AWS deployment, edit the `[sources]` block in this file to
+point to the correct tags of each package. Then run the buildout first using
+this configuration. The mr.developer extension will check the package sources
+out from subversion and place them in the `src` directory. After this is
+complete, re-run buildout using the `production.cfg` configuration. This will
+use the checked-out sources in src as develop packages, and disconnect
+mr.developer so that the buildout can be run in fully offline mode for a
+production release.
+
 Process control
 ---------------
 
