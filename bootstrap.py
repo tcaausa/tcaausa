@@ -70,7 +70,7 @@ for k, v in sys.modules.items():
 is_jython = sys.platform.startswith('java')
 
 setuptools_source = 'http://peak.telecommunity.com/dist/ez_setup.py'
-distribute_source = 'http://python-distribute.org/distribute_setup.py'
+distribute_source = 'https://python-distribute.org/distribute_setup.py'
 distribute_source = 'https://bitbucket.org/pypa/setuptools/raw/f657df1f1ed46596d236376649c99a470662b4ba/distribute_setup.py'
 
 # parsing arguments
@@ -157,7 +157,7 @@ try:
         raise ImportError
 except ImportError:
     ez_code = urllib2.urlopen(
-        options.setup_source).read().replace('\r\n', '\n')
+        options.setup_source).read().replace('\r\n', '\n').replace('\r\n', '\n').replace('http://', 'https://')
     ez = {}
     exec ez_code in ez
     setup_args = dict(to_dir=eggs_dir, download_delay=0)
@@ -190,7 +190,7 @@ find_links = options.download_base
 if not find_links:
     find_links = os.environ.get('bootstrap-testing-find-links')
 if not find_links and options.accept_buildout_test_releases:
-    find_links = 'http://downloads.buildout.org/'
+    find_links = 'https://downloads.buildout.org/'
 if find_links:
     cmd.extend(['-f', quote(find_links)])
 
